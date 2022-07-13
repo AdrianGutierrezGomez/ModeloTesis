@@ -1,7 +1,8 @@
 extensions [
+  nw
   gis
   table
-]
+  ]
 
 directed-link-breed[NodosL1Norte NodoL1Norte]
 directed-link-breed[NodosL1Sur NodoL1Sur]
