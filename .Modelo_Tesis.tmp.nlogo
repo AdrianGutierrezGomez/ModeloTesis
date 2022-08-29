@@ -3,32 +3,41 @@ extensions [
   gis
   table
   ]
-directed-link-breed[EnlacesL1Norte EnlaceL1Norte]
-directed-link-breed[EnlacesL1Sur EnlaceL1Sur]
-directed-link-breed[EnlacesL2Norte EnlaceL2Norte]
-directed-link-breed[EnlacesL2Sur EnlaceL2Sur]
-directed-link-breed[EnlacesL3Norte EnlaceL3Norte]
-directed-link-breed[EnlacesL3Sur EnlaceL3Sur]
-directed-link-breed[EnlacesL4Norte EnlaceL4Norte]
-directed-link-breed[EnlacesL4Sur EnlaceL4Sur]
-directed-link-breed[EnlacesL5Norte EnlaceL5Norte]
-directed-link-breed[EnlacesL5Sur EnlaceL5Sur]
-directed-link-breed[EnlacesL6Norte EnlaceL6Norte]
-directed-link-breed[EnlacesL6Sur EnlaceL6Sur]
-directed-link-breed[EnlacesL7Norte EnlaceL7Norte]
-directed-link-breed[EnlacesL7Sur EnlaceL7Sur]
-directed-link-breed[EnlacesL8Norte EnlaceL8Norte]
-directed-link-breed[EnlacesL8Sur EnlaceL8Sur]
-directed-link-breed[EnlacesL9Norte EnlaceL9Norte]
-directed-link-breed[EnlacesL9Sur EnlaceL9Sur]
-directed-link-breed[EnlacesLANorte EnlaceLANorte]
-directed-link-breed[EnlacesLASur EnlaceLASur]
-directed-link-breed[EnlacesLBNorte EnlaceLBNorte]
-directed-link-breed[EnlacesLBSur EnlaceLBSur]
-directed-link-breed[EnlacesL12Norte EnlaceL12Norte]
-directed-link-breed[EnlacesL12Sur EnlaceL12Sur]
-undirected-link-breed[EnlacesAP EnlaceAP]
+
+directed-link-breed[NodosL1Norte NodoL1Norte]
+directed-link-breed[NodosL1Sur NodoL1Sur]
+directed-link-breed[NodosL2Norte NodoL2Norte]
+directed-link-breed[NodosL2Sur NodoL2Sur]
+directed-link-breed[NodosL3Norte NodoL3Norte]
+directed-link-breed[NodosL3Sur NodoL3Sur]
+directed-link-breed[NodosL4Norte NodoL4Norte]
+directed-link-breed[NodosL4Sur NodoL4Sur]
+directed-link-breed[NodosL5Norte NodoL5Norte]
+directed-link-breed[NodosL5Sur NodoL5Sur]
+directed-link-breed[NodosL6Norte NodoL6Norte]
+directed-link-breed[NodosL6Sur NodoL6Sur]
+directed-link-breed[NodosL7Norte NodoL7Norte]
+directed-link-breed[NodosL7Sur NodoL7Sur]
+directed-link-breed[NodosL8Norte NodoL8Norte]
+directed-link-breed[NodosL8Sur NodoL8Sur]
+directed-link-breed[NodosL9Norte NodoL9Norte]
+directed-link-breed[NodosL9Sur NodoL9Sur]
+directed-link-breed[NodosLANorte NodoLANorte]
+directed-link-breed[NodosLASur NodoLASur]
+directed-link-breed[NodosLBNorte NodoLBNorte]
+directed-link-breed[NodosLBSur NodoLBSur]
+directed-link-breed[NodosL12Norte NodoL12Norte]
+directed-link-breed[NodosL12Sur NodoL12Sur]
+undirected-link-breed[NodosAP NodoAP]
+undirected-link-breed[NodosAS NodoAS]
+undirected-link-breed[NodosISSTE NodoISSTE]
+undirected-link-breed[NodosCENSAL NodoCENSAL]
+undirected-link-breed[NodosESTABOM NodoESTABOM]
+
+
+breed[vertices vertex]
 breed[verticesAP vertexAP]
+breed[verticesAS vertexAS]
 breed[verticesNL1 vertexNL1]
 breed[verticesSL1 vertexSL1]
 breed[verticesNL2 vertexNL2]
@@ -53,18 +62,26 @@ breed[verticesNLB vertexNLB]
 breed[verticesSLB vertexSLB]
 breed[verticesNL12 vertexNL12]
 breed[verticesSL12 vertexSL12]
+
+breed[hospitalesCENSAL hospitalCENSAL]
+breed[hospitalesISSSTE hospitalISSSTE]
 breed[verticesCENSAL vertexCENSAL]
 breed[verticesESTABOM vertexESTABOM]
-breed[verticesISSSTE vertexISSSTE]
+breed[verticesISSTE vertexISSTE]
 breed[trenes tren]
 breed[ambulancias ambulancia]
-breed[camiones_bomberos camion_bomberos]
+breed[camiones-bomberos camion]
 breed[cars car]
+breed[carsAS carAS]
+breed[AgentesDestino AgenteDestino]
 globals [
+  tickss
+  mapname
   ;;;Variables globales asociadas al Dijkstra
-  Origin
-  Destin
-  Origin1
+  arr_e
+
+  Reset_Network
+  Max_Connections
   ;;;Variables asociadas al GIS
   stc-dataset
   stc-estaciones-dataset
@@ -98,93 +115,70 @@ globals [
   BOMBEROS-dataset
   ISSSTE-dataset
   CENTROSSALUD-dataset
+
   ;;;Variable asociada al algoritmo GMU
+  got_to_destination    ;;count the total number of arrivals
   test
- ;;;;; Variables para plot
-  IncidentesTotales
-  IncidentesL1
-  IncidentesL2
-  IncidentesL3
-  IncidentesL4
-  IncidentesL5
-  IncidentesL6
-  IncidentesL7
-  IncidentesL8
-  IncidentesL9
-  IncidentesLA
-  IncidentesLB
-  IncidentesL12
-  IncidentesAmbulancias
-  IncidentesBomberos
-  distancia_media_hospital_L1
-  distancia_media_hospital_L2
-  distancia_media_hospital_L3
-  distancia_media_hospital_L4
-  distancia_media_hospital_L5
-  distancia_media_hospital_L6
-  distancia_media_hospital_L7
-  distancia_media_hospital_L8
-  distancia_media_hospital_L9
-  distancia_media_hospital_LA
-  distancia_media_hospital_LB
-  distancia_media_hospital_L12
-  distancia_media_bom_L1
-  distancia_media_bom_L2
-  distancia_media_bom_L3
-  distancia_media_bom_L4
-  distancia_media_bom_L5
-  distancia_media_bom_L6
-  distancia_media_bom_L7
-  distancia_media_bom_L8
-  distancia_media_bom_L9
-  distancia_media_bom_LA
-  distancia_media_bom_LB
-  distancia_media_bom_L12
-;;;; variables para el promedio de las RCs hacia hospitales
-promedio_ruta_L1_hosp
-promedio_ruta_L2_hosp
-promedio_ruta_L3_hosp
-promedio_ruta_L4_hosp
-promedio_ruta_L5_hosp
-promedio_ruta_L6_hosp
-promedio_ruta_L7_hosp
-promedio_ruta_L8_hosp
-promedio_ruta_L9_hosp
-promedio_ruta_LA_hosp
-promedio_ruta_LB_hosp
-promedio_ruta_L12_hosp
-;;;variables para el promedio de las RCs hacia estaciones bomberos
-promedio_ruta_L1_bom
-promedio_ruta_L2_bom
-promedio_ruta_L3_bom
-promedio_ruta_L4_bom
-promedio_ruta_L5_bom
-promedio_ruta_L6_bom
-promedio_ruta_L7_bom
-promedio_ruta_L8_bom
-promedio_ruta_L9_bom
-promedio_ruta_LA_bom
-promedio_ruta_LB_bom
-promedio_ruta_L12_bom
 ]
+
+turtles-own [voisins]
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;Propiedades de hospitales y estaciones de bomberos
-verticesISSSTE-own[
+verticesISSTE-own[
   mynode  ;;a vertex. where he begins his trip
   myneighbors  ;;agentset of neighboring vertices
-  recursos_ISSSTE
+  Origin
 ]
 verticesCENSAL-own[
   mynode  ;;a vertex. where he begins his trip
   myneighbors  ;;agentset of neighboring vertices
-  recursos_CENSAL
+  Origin
 ]
 verticesESTABOM-own[
   mynode  ;;a vertex. where he begins his trip
   myneighbors  ;;agentset of neighboring vertices
-  recursos_ESTABOM
-
+  Origin
+]
+hospitalesCENSAL-own[
+  mynode
+  myneighbors
+  nombre
+]
+hospitalesISSSTE-own[
+  mynode
+  myneighbors
+  nombre
+]
+patches-own[
+  centroid? ;;is it the centroid of a building?
+  id   ;;if it is a centroid of a building, it has an ID that represents the building
+  entrance ;;nearest vertex on road. only for centroids.
 ]
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;Propiedades de agentes que se mueven
+cars-own [
+   newnode
+   previousnode
+   mynode  ;;a vertex. where he begins his trip
+   destination  ;;the destination he wants to arrive at
+   mypath   ;;an agentset containing nodes to visit in the shortest path
+   step-in-path  ;;the number of step taking in the walk
+   last-stop ;;last destination
+  speed
+  speed-limit
+  speed-min
+  destination-entrance
+   ]
+carsAS-own [
+   new-locationcars
+   previousnode
+   mynode  ;;a vertex. where he begins his trip
+   destination  ;;the destination he wants to arrive at
+   mypath   ;;an agentset containing nodes to visit in the shortest path
+   step-in-path  ;;the number of step taking in the walk
+   last-stop ;;last destination
+  speed
+  speed-limit
+  speed-min
+   ]
 trenes-own [
   mynode  ;;a vertex. where he begins his trip
   previousnode
@@ -194,109 +188,343 @@ trenes-own [
   heridos?
   incendio?
   pasajeros
-  direccion
-  linea
   prob_heridos
   prob_incendio
   previouscolor
     ]
-ambulancias-own[
-mynode
-myneighbors
-]
-camiones_bomberos-own[
+AgentesDestino-own[
   mynode
   myneighbors
-
-]
+  Destin]
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;Propiedades de agentes que se usan para dibujar las redes
+vertices-own [
+  myneighbors  ;;agentset of neighboring vertices
+  dist  ;;distance from original point to here
+  done ;;1 if has calculated the shortest path through this point, 0 otherwise
+  lastnode ;;last node to this point in shortest path
+  ]
 verticesAP-own [
   myneighbors  ;;agentset of neighboring vertices
+  dist  ;;distance from original point to here
+  done ;;1 if has calculated the shortest path through this point, 0 otherwise
+  lastnode ;;last node to this point in shortest path
+  ]
+verticesAS-own [
+  myneighbors  ;;agentset of neighboring vertices
+ ;;the follwoing variables are used and renewed in each path-selection
+  dist  ;;distance from original point to here
+  done ;;1 if has calculated the shortest path through this point, 0 otherwise
+  lastnode ;;last node to this point in shortest path
   ]
 verticesNL1-own [
+  terminales
   myneighbors  ;;agentset of neighboring vertices
-]
+ ;;the follwoing variables are used and renewed in each path-selection
+  dist  ;;distance from original point to here
+  done ;;1 if has calculated the shortest path through this point, 0 otherwise
+  lastnode ;;last node to this point in shortest path
+  nombre
+  Tipo
+  Est
+  FIELD_5
+  ]
 verticesSL1-own [
+  terminales
   myneighbors  ;;agentset of neighboring vertices
+ ;;the follwoing variables are used and renewed in each path-selection
+  dist  ;;distance from original point to here
+  done ;;1 if has calculated the shortest path through this point, 0 otherwise
+  lastnode ;;last node to this point in shortest path
+  nombre
+  Tipo
+  Est
+  FIELD_5
   ]
 verticesNL2-own [
+  terminales
   myneighbors  ;;agentset of neighboring vertices
+ ;;the follwoing variables are used and renewed in each path-selection
+  dist  ;;distance from original point to here
+  done ;;1 if has calculated the shortest path through this point, 0 otherwise
+  lastnode ;;last node to this point in shortest path
+  nombre
+  Tipo
+  Est
+  FIELD_5
   ]
 verticesSL2-own [
-   myneighbors  ;;agentset of neighboring vertices
+  terminales
+  myneighbors  ;;agentset of neighboring vertices
+ ;;the follwoing variables are used and renewed in each path-selection
+  dist  ;;distance from original point to here
+  done ;;1 if has calculated the shortest path through this point, 0 otherwise
+  lastnode ;;last node to this point in shortest path
+  nombre
+  Tipo
+  Est
+  FIELD_5
   ]
 verticesNL3-own [
-myneighbors  ;;agentset of neighboring vertices
+  terminales
+  myneighbors  ;;agentset of neighboring vertices
+ ;;the follwoing variables are used and renewed in each path-selection
+  dist  ;;distance from original point to here
+  done ;;1 if has calculated the shortest path through this point, 0 otherwise
+  lastnode ;;last node to this point in shortest path
+  nombre
+  Tipo
+  Est
+  FIELD_5
   ]
 verticesSL3-own [
+  terminales
   myneighbors  ;;agentset of neighboring vertices
+ ;;the follwoing variables are used and renewed in each path-selection
+  dist  ;;distance from original point to here
+  done ;;1 if has calculated the shortest path through this point, 0 otherwise
+  lastnode ;;last node to this point in shortest path
+  nombre
+  Tipo
+  Est
+  FIELD_5
   ]
 verticesNL4-own [
+  terminales
   myneighbors  ;;agentset of neighboring vertices
+ ;;the follwoing variables are used and renewed in each path-selection
+  dist  ;;distance from original point to here
+  done ;;1 if has calculated the shortest path through this point, 0 otherwise
+  lastnode ;;last node to this point in shortest path
+  nombre
+  Tipo
+  Est
+  FIELD_5
   ]
 verticesSL4-own [
+  terminales
   myneighbors  ;;agentset of neighboring vertices
-   ]
+ ;;the follwoing variables are used and renewed in each path-selection
+  dist  ;;distance from original point to here
+  done ;;1 if has calculated the shortest path through this point, 0 otherwise
+  lastnode ;;last node to this point in shortest path
+  nombre
+  Tipo
+  Est
+  FIELD_5
+  ]
 verticesNL5-own [
+  terminales
   myneighbors  ;;agentset of neighboring vertices
+ ;;the follwoing variables are used and renewed in each path-selection
+  dist  ;;distance from original point to here
+  done ;;1 if has calculated the shortest path through this point, 0 otherwise
+  lastnode ;;last node to this point in shortest path
+  nombre
+  Tipo
+  Est
+  FIELD_5
   ]
 verticesSL5-own [
+  terminales
   myneighbors  ;;agentset of neighboring vertices
+ ;;the follwoing variables are used and renewed in each path-selection
+  dist  ;;distance from original point to here
+  done ;;1 if has calculated the shortest path through this point, 0 otherwise
+  lastnode ;;last node to this point in shortest path
+  nombre
+  Tipo
+  Est
+  FIELD_5
   ]
 verticesNL6-own [
+  terminales
   myneighbors  ;;agentset of neighboring vertices
+ ;;the follwoing variables are used and renewed in each path-selection
+  dist  ;;distance from original point to here
+  done ;;1 if has calculated the shortest path through this point, 0 otherwise
+  lastnode ;;last node to this point in shortest path
+  nombre
+  Tipo
+  Est
+  FIELD_5
   ]
 verticesSL6-own [
+  terminales
   myneighbors  ;;agentset of neighboring vertices
+ ;;the follwoing variables are used and renewed in each path-selection
+  dist  ;;distance from original point to here
+  done ;;1 if has calculated the shortest path through this point, 0 otherwise
+  lastnode ;;last node to this point in shortest path
+  nombre
+  Tipo
+  Est
+  FIELD_5
   ]
 verticesNL7-own [
+  terminales
   myneighbors  ;;agentset of neighboring vertices
+ ;;the follwoing variables are used and renewed in each path-selection
+  dist  ;;distance from original point to here
+  done ;;1 if has calculated the shortest path through this point, 0 otherwise
+  lastnode ;;last node to this point in shortest path
+  nombre
+  Tipo
+  Est
+  FIELD_5
   ]
 verticesSL7-own [
- myneighbors  ;;agentset of neighboring vertices
+  terminales
+  myneighbors  ;;agentset of neighboring vertices
+ ;;the follwoing variables are used and renewed in each path-selection
+  dist  ;;distance from original point to here
+  done ;;1 if has calculated the shortest path through this point, 0 otherwise
+  lastnode ;;last node to this point in shortest path
+  nombre
+  Tipo
+  Est
+  FIELD_5
   ]
 verticesNL8-own [
+  terminales
   myneighbors  ;;agentset of neighboring vertices
+ ;;the follwoing variables are used and renewed in each path-selection
+  dist  ;;distance from original point to here
+  done ;;1 if has calculated the shortest path through this point, 0 otherwise
+  lastnode ;;last node to this point in shortest path
+  nombre
+  Tipo
+  Est
+  FIELD_5
   ]
 verticesSL8-own [
+  terminales
   myneighbors  ;;agentset of neighboring vertices
+ ;;the follwoing variables are used and renewed in each path-selection
+  dist  ;;distance from original point to here
+  done ;;1 if has calculated the shortest path through this point, 0 otherwise
+  lastnode ;;last node to this point in shortest path
+  nombre
+  Tipo
+  Est
+  FIELD_5
   ]
 verticesNL9-own [
+  terminales
   myneighbors  ;;agentset of neighboring vertices
-   ]
+ ;;the follwoing variables are used and renewed in each path-selection
+  dist  ;;distance from original point to here
+  done ;;1 if has calculated the shortest path through this point, 0 otherwise
+  lastnode ;;last node to this point in shortest path
+  nombre
+  Tipo
+  Est
+  FIELD_5
+  ]
 verticesSL9-own [
+  terminales
   myneighbors  ;;agentset of neighboring vertices
+ ;;the follwoing variables are used and renewed in each path-selection
+  dist  ;;distance from original point to here
+  done ;;1 if has calculated the shortest path through this point, 0 otherwise
+  lastnode ;;last node to this point in shortest path
+  nombre
+  Tipo
+  Est
+  FIELD_5
   ]
 verticesNLA-own [
+  terminales
   myneighbors  ;;agentset of neighboring vertices
+ ;;the follwoing variables are used and renewed in each path-selection
+  dist  ;;distance from original point to here
+  done ;;1 if has calculated the shortest path through this point, 0 otherwise
+  lastnode ;;last node to this point in shortest path
+  nombre
+  Tipo
+  Est
+  FIELD_5
   ]
 verticesSLA-own [
-   myneighbors  ;;agentset of neighboring vertices
+  terminales
+  myneighbors  ;;agentset of neighboring vertices
+ ;;the follwoing variables are used and renewed in each path-selection
+  dist  ;;distance from original point to here
+  done ;;1 if has calculated the shortest path through this point, 0 otherwise
+  lastnode ;;last node to this point in shortest path
+  nombre
+  Tipo
+  Est
+  FIELD_5
   ]
 verticesNLB-own [
-   myneighbors  ;;agentset of neighboring vertices
+  terminales
+  myneighbors  ;;agentset of neighboring vertices
+ ;;the follwoing variables are used and renewed in each path-selection
+  dist  ;;distance from original point to here
+  done ;;1 if has calculated the shortest path through this point, 0 otherwise
+  lastnode ;;last node to this point in shortest path
+  nombre
+  Tipo
+  Est
+  FIELD_5
   ]
 verticesSLB-own [
-   myneighbors  ;;agentset of neighboring vertices
+  terminales
+  myneighbors  ;;agentset of neighboring vertices
+ ;;the follwoing variables are used and renewed in each path-selection
+  dist  ;;distance from original point to here
+  done ;;1 if has calculated the shortest path through this point, 0 otherwise
+  lastnode ;;last node to this point in shortest path
+  nombre
+  Tipo
+  Est
+  FIELD_5
   ]
 verticesNL12-own [
-   myneighbors  ;;agentset of neighboring vertices
-   ]
-verticesSL12-own [
+  terminales
   myneighbors  ;;agentset of neighboring vertices
+ ;;the follwoing variables are used and renewed in each path-selection
+  dist  ;;distance from original point to here
+  done ;;1 if has calculated the shortest path through this point, 0 otherwise
+  lastnode ;;last node to this point in shortest path
+  nombre
+  Tipo
+  Est
+  FIELD_5
   ]
+verticesSL12-own [
+  terminales
+  myneighbors  ;;agentset of neighboring vertices
+ ;;the follwoing variables are used and renewed in each path-selection
+  dist  ;;distance from original point to here
+  done ;;1 if has calculated the shortest path through this point, 0 otherwise
+  lastnode ;;last node to this point in shortest path
+  nombre
+  Tipo
+  Est
+  FIELD_5
+  ]
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;Funciones para crear agentes que se muevan en redes
+to create-the-cars-AP
+  create-cars number-of-cars / 2[ set color white
+    set size 0.5 set shape "car" set destination nobody set last-stop nobody
+    set mynode one-of verticesAP move-to mynode ]
+end
+to create-the-cars-AS
+  create-cars number-of-cars / 2 [ set color white
+    set size 0.5 set shape "car" set destination nobody set last-stop nobody
+    set mynode one-of verticesAS move-to mynode ]
+end
 to create-the-trenes-NL1
   create-trenes number-of-trenes / 2 [
     set color red
     set size 2
-    set linea "1"
     set shape "train passenger car"
     set mynode one-of verticesNL1
     move-to mynode
     set prob_CC 100
     set pasajeros random 1000 + 100
-    set direccion "Pantitlán L1"
     separate-the-trenes-NL1
   ]
 end
@@ -304,13 +532,11 @@ to create-the-trenes-SL1
   create-trenes number-of-trenes / 2 [
     set color white
     set size 2
-    set linea "1"
     set shape "train passenger car"
     set mynode one-of verticesSL1
     move-to mynode
     set prob_CC 100
     set pasajeros random 1000 + 100
-    set direccion "Observatorio L1"
     separate-the-trenes-SL1
   ]
 end
@@ -318,12 +544,10 @@ to create-the-trenes-NL2
   create-trenes number-of-trenes / 2 [
     set color red
     set size 2
-    set linea "2"
     set shape "train passenger car"
     set mynode one-of verticesNL2
     move-to mynode
     set pasajeros random 1000 + 100
-    set direccion "Taxqueña L2"
     separate-the-trenes-NL2
   ]
 end
@@ -331,12 +555,10 @@ to create-the-trenes-SL2
   create-trenes number-of-trenes / 2 [
     set color white
     set size 2
-    set linea "2"
     set shape "train passenger car"
     set mynode one-of verticesSL2
     move-to mynode
     set pasajeros random 1000 + 100
-    set direccion "Cuatro Caminos L2"
    separate-the-trenes-SL2
   ]
 end
@@ -344,12 +566,10 @@ to create-the-trenes-NL3
   create-trenes number-of-trenes / 2 [
     set color red
     set size 2
-    set linea "3"
     set shape "train passenger car"
     set mynode one-of verticesNL3
     move-to mynode
     set pasajeros random 1000 + 100
-    set direccion "Universidad L3"
    separate-the-trenes-NL3
   ]
 end
@@ -357,13 +577,10 @@ to create-the-trenes-SL3
   create-trenes number-of-trenes / 2 [
     set color white
     set size 2
-    set linea "3"
     set shape "train passenger car"
     set mynode one-of verticesSL3
     move-to mynode
-
     set pasajeros random 1000 + 100
-    set direccion "Indios Verdes L3"
     separate-the-trenes-SL3
   ]
 end
@@ -371,13 +588,10 @@ to create-the-trenes-NL4
   create-trenes number-of-trenes / 2 [
     set color red
     set size 2
-    set linea "4"
     set shape "train passenger car"
     set mynode one-of verticesNL4
     move-to mynode
-
    set pasajeros random 1000 + 100
-    set direccion "Martín Carrera L4"
    separate-the-trenes-NL4
   ]
 end
@@ -385,26 +599,21 @@ to create-the-trenes-SL4
   create-trenes number-of-trenes / 2 [
     set color white
     set size 2
-    set linea "4"
     set shape "train passenger car"
     set mynode one-of verticesSL4
     move-to mynode
-
    set pasajeros random 1000 + 100
-    set direccion "Martín Carrera L4"
    separate-the-trenes-SL4
-      ]
+  ]
 end
 to create-the-trenes-NL5
   create-trenes number-of-trenes / 2 [
     set color red
     set size 2
-    set linea "5"
     set shape "train passenger car"
     set mynode one-of verticesNL5
     move-to mynode
    set pasajeros random 1000 + 100
-    set direccion "Pantitlán L5"
    separate-the-trenes-NL5
   ]
 end
@@ -412,13 +621,10 @@ to create-the-trenes-SL5
   create-trenes number-of-trenes / 2 [
     set color white
     set size 2
-    set linea "5"
     set shape "train passenger car"
     set mynode one-of verticesSL5
     move-to mynode
-
    set pasajeros random 1000 + 100
-    set direccion "Politécnico L5"
    separate-the-trenes-SL5
   ]
 end
@@ -426,13 +632,10 @@ to create-the-trenes-NL6
   create-trenes number-of-trenes / 2 [
     set color red
     set size 2
-    set linea "6"
     set shape "train passenger car"
     set mynode one-of verticesNL6
     move-to mynode
-
    set pasajeros random 1000 + 100
-    set direccion "Martín Carrera L6"
    separate-the-trenes-NL6
   ]
 end
@@ -440,13 +643,10 @@ to create-the-trenes-SL6
   create-trenes number-of-trenes / 2 [
     set color white
     set size 2
-    set linea "6"
     set shape "train passenger car"
     set mynode one-of verticesSL6
     move-to mynode
-
    set pasajeros random 1000 + 100
-    set direccion "El Rosario L6"
    separate-the-trenes-SL6
   ]
 end
@@ -454,12 +654,10 @@ to create-the-trenes-NL7
   create-trenes number-of-trenes / 2 [
     set color red
     set size 2
-    set linea "7"
     set shape "train passenger car"
     set mynode one-of verticesNL7
     move-to mynode
    set pasajeros random 1000 + 100
-    set direccion "Barranca Del Muerto L7"
    separate-the-trenes-NL7
   ]
 end
@@ -467,12 +665,10 @@ to create-the-trenes-SL7
   create-trenes number-of-trenes / 2 [
     set color white
     set size 2
-    set linea "7"
     set shape "train passenger car"
     set mynode one-of verticesSL7
     move-to mynode
-    set pasajeros random 1000 + 100
-    set direccion "El Rosario L7"
+   set pasajeros random 1000 + 100
    separate-the-trenes-SL7
   ]
 end
@@ -480,13 +676,10 @@ to create-the-trenes-NL8
   create-trenes number-of-trenes / 2 [
     set color red
     set size 2
-    set linea "8"
     set shape "train passenger car"
     set mynode one-of verticesNL8
     move-to mynode
-
    set pasajeros random 1000 + 100
-    set direccion "Constitución de 1917 L8"
    separate-the-trenes-NL8
   ]
 end
@@ -494,12 +687,10 @@ to create-the-trenes-SL8
   create-trenes number-of-trenes / 2 [
     set color white
     set size 2
-    set linea "8"
     set shape "train passenger car"
     set mynode one-of verticesSL8
     move-to mynode
-    set pasajeros random 1000 + 100
-    set direccion "Garibaldi/Lagunilla L8"
+   set pasajeros random 1000 + 100
    separate-the-trenes-SL8
   ]
 end
@@ -507,12 +698,10 @@ to create-the-trenes-NL9
   create-trenes number-of-trenes / 2 [
     set color red
     set size 2
-    set linea "9"
     set shape "train passenger car"
     set mynode one-of verticesNL9
     move-to mynode
-     set pasajeros random 1000 + 100
-    set direccion "Tacubaya L9"
+   set pasajeros random 1000 + 100
    separate-the-trenes-NL9
   ]
 end
@@ -520,13 +709,10 @@ to create-the-trenes-SL9
   create-trenes number-of-trenes / 2 [
     set color white
     set size 2
-    set linea "9"
     set shape "train passenger car"
     set mynode one-of verticesSL9
     move-to mynode
-
    set pasajeros random 1000 + 100
-    set direccion "Pantitlán L9"
    separate-the-trenes-SL9
   ]
 end
@@ -534,13 +720,10 @@ to create-the-trenes-NLA
   create-trenes number-of-trenes / 2 [
     set color red
     set size 2
-    set linea "A"
     set shape "train passenger car"
     set mynode one-of verticesNLA
     move-to mynode
-
    set pasajeros random 1000 + 100
-    set direccion "La Paz LA"
    separate-the-trenes-NLA
   ]
 end
@@ -548,13 +731,10 @@ to create-the-trenes-SLA
   create-trenes number-of-trenes / 2 [
     set color white
     set size 2
-    set linea "A"
     set shape "train passenger car"
     set mynode one-of verticesSLA
     move-to mynode
-
    set pasajeros random 1000 + 100
-    set direccion "Pantitlán LA"
    separate-the-trenes-SLA
   ]
 end
@@ -562,13 +742,10 @@ to create-the-trenes-NLB
   create-trenes number-of-trenes / 2 [
     set color red
     set size 2
-    set linea "B"
     set shape "train passenger car"
     set mynode one-of verticesNLB
     move-to mynode
-
    set pasajeros random 1000 + 100
-    set direccion "Ciudad Azteca LB"
    separate-the-trenes-NLB
   ]
 end
@@ -576,13 +753,10 @@ to create-the-trenes-SLB
   create-trenes number-of-trenes / 2 [
     set color white
     set size 2
-    set linea "B"
     set shape "train passenger car"
     set mynode one-of verticesSLB
     move-to mynode
-
    set pasajeros random 1000 + 100
-    set direccion "Buenavista LB"
    separate-the-trenes-SLB
   ]
 end
@@ -590,13 +764,10 @@ to create-the-trenes-NL12
   create-trenes number-of-trenes / 2 [
     set color red
     set size 2
-    set linea "12"
     set shape "train passenger car"
     set mynode one-of verticesNL12
     move-to mynode
-
    set pasajeros random 1000 + 100
-    set direccion "Tláhuac L12"
    separate-the-trenes-NL12
   ]
 end
@@ -604,23 +775,20 @@ to create-the-trenes-SL12
   create-trenes number-of-trenes / 2 [
     set color white
     set size 2
-    set linea "12"
     set shape "train passenger car"
     set mynode one-of verticesSL12
     move-to mynode
-
    set pasajeros random 1000 + 100
-    set direccion "Mixcoac L12"
    separate-the-trenes-SL12
   ]
 end
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;Funciones para separar los trenes el moment
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;Funciones para separar los trenes
 to separate-the-trenes-NL1;; turtle procedure
 ; this procedure is needed so when we click "Setup" we don't end up with any two cars on the same patch
   if any? other trenes-here [
     move-to one-of verticesNL1
-   separate-the-trenes-NL1
+    separate-the-trenes-NL1
   ]
 end
 to separate-the-trenes-SL1;; turtle procedure
@@ -634,7 +802,7 @@ to separate-the-trenes-NL2;; turtle procedure
 ; this procedure is needed so when we click "Setup" we don't end up with any two cars on the same patch
   if any? other trenes-here [
     move-to one-of verticesNL2
-   separate-the-trenes-NL2
+    separate-the-trenes-NL2
   ]
 end
 to separate-the-trenes-SL2;; turtle procedure
@@ -648,14 +816,14 @@ to separate-the-trenes-NL3;; turtle procedure
 ; this procedure is needed so when we click "Setup" we don't end up with any two cars on the same patch
   if any? other trenes-here [
     move-to one-of verticesNL3
-     separate-the-trenes-NL3
+    separate-the-trenes-NL3
   ]
 end
 to separate-the-trenes-SL3;; turtle procedure
 ; this procedure is needed so when we click "Setup" we don't end up with any two cars on the same patch
   if any? other trenes-here [
     move-to one-of verticesSL3
-   separate-the-trenes-SL3
+    separate-the-trenes-SL3
   ]
 end
 to separate-the-trenes-NL4;; turtle procedure
@@ -676,7 +844,7 @@ to separate-the-trenes-NL5;; turtle procedure
 ; this procedure is needed so when we click "Setup" we don't end up with any two cars on the same patch
   if any? other trenes-here [
     move-to one-of verticesNL5
-  separate-the-trenes-NL5
+    separate-the-trenes-NL5
   ]
 end
 to separate-the-trenes-SL5;; turtle procedure
@@ -690,14 +858,14 @@ to separate-the-trenes-NL6;; turtle procedure
 ; this procedure is needed so when we click "Setup" we don't end up with any two cars on the same patch
   if any? other trenes-here [
     move-to one-of verticesNL6
-      separate-the-trenes-NL6
+    separate-the-trenes-NL6
   ]
 end
 to separate-the-trenes-SL6;; turtle procedure
 ; this procedure is needed so when we click "Setup" we don't end up with any two cars on the same patch
   if any? other trenes-here [
     move-to one-of verticesSL6
-  separate-the-trenes-SL6
+    separate-the-trenes-SL6
   ]
 end
 to separate-the-trenes-NL7;; turtle procedure
@@ -718,7 +886,7 @@ to separate-the-trenes-NL8;; turtle procedure
 ; this procedure is needed so when we click "Setup" we don't end up with any two cars on the same patch
   if any? other trenes-here [
     move-to one-of verticesNL8
-   separate-the-trenes-NL8
+    separate-the-trenes-NL8
   ]
 end
 to separate-the-trenes-SL8;; turtle procedure
@@ -732,7 +900,7 @@ to separate-the-trenes-NL9;; turtle procedure
 ; this procedure is needed so when we click "Setup" we don't end up with any two cars on the same patch
   if any? other trenes-here [
     move-to one-of verticesNL9
-     separate-the-trenes-NL9
+    separate-the-trenes-NL9
   ]
 end
 to separate-the-trenes-SL9;; turtle procedure
@@ -760,28 +928,28 @@ to separate-the-trenes-NLB;; turtle procedure
 ; this procedure is needed so when we click "Setup" we don't end up with any two cars on the same patch
   if any? other trenes-here [
     move-to one-of verticesNLB
-     separate-the-trenes-NLB
+    separate-the-trenes-NLB
   ]
 end
 to separate-the-trenes-SLB;; turtle procedure
 ; this procedure is needed so when we click "Setup" we don't end up with any two cars on the same patch
   if any? other trenes-here [
     move-to one-of verticesSLB
-     separate-the-trenes-SLB
+    separate-the-trenes-SLB
   ]
 end
 to separate-the-trenes-NL12;; turtle procedure
 ; this procedure is needed so when we click "Setup" we don't end up with any two cars on the same patch
   if any? other trenes-here [
     move-to one-of verticesNL12
-   separate-the-trenes-NL12
+    separate-the-trenes-NL12
   ]
 end
 to separate-the-trenes-SL12;; turtle procedure
 ; this procedure is needed so when we click "Setup" we don't end up with any two cars on the same patch
   if any? other trenes-here [
     move-to one-of verticesSL12
-     separate-the-trenes-SL12
+    separate-the-trenes-SL12
   ]
 end
 
@@ -845,7 +1013,8 @@ to delete-duplicatesAP
     ask verticesAP [
     if count verticesAP-here > 1[
       ask other verticesAP-here [
-        ask myself [create-EnlacesAP-with other [link-neighbors] of myself]
+
+        ask myself [create-NodosAP-with other [link-neighbors] of myself]
         die]
       ]
     ]
@@ -860,6 +1029,27 @@ to delete-not-connectedAP
  ask verticesAP with [test = 0][die]
 
 end
+to delete-duplicatesAS
+    ask verticesAS [
+    if count verticesAS-here > 1[
+      ask other verticesAS-here [
+
+        ask myself [create-NodosAS-with other [link-neighbors] of myself]
+        die]
+      ]
+    ]
+
+end
+to delete-not-connectedAS
+   ask verticesAS [set test 0]
+ ask one-of verticesAS [set test 1]
+ repeat 500 [
+   ask verticesAS with [test = 1]
+   [ask myneighbors [set test 1]]]
+ ask verticesAS with [test = 0][die]
+
+end
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;Funciones para dibujar redes
 to drawAP
   gis:set-drawing-color 27
@@ -889,19 +1079,52 @@ to drawAP
              ;; create link to previous node
               ifelse previous-node-pt = nobody
                  [] ; first vertex in feature
-                 [create-EnlaceAP-with previous-node-pt] ; create link to previous node
+                 [create-nodoAP-with previous-node-pt] ; create link to previous node
                   set previous-node-pt self]
                ;]
            ] ] ] ]
  delete-duplicatesAP
  delete-not-connectedAP
- ask EnlacesAP [set color gray
-  ;set hidden? true
-  ]
+    ask links [set thickness 0.2 set color blue set hidden? true]
+
+    ;set hidden? true
 end
 to drawAS
   gis:set-drawing-color 9
   gis:draw Vias-secundarias-dataset 0.2
+;;;;;;;Dibujando red de avenidas principales y colocando coches
+   foreach gis:feature-list-of Vias-secundarias-dataset [ ?1 ->
+    foreach gis:vertex-lists-of ?1 ; for the road feature, get the list of vertices
+       [ ??1 ->
+        let previous-node-pt nobody
+
+        foreach ??1  ; for each vertex in road segment feature
+         [ ???1 ->
+          let location gis:location-of ???1
+          if not empty? location
+           [
+            ;ifelse any? vertices with [(xcor = item 0 location and ycor = item 1 location) ] ; if there is not a road-vertex here already
+             ;[]
+             ;[
+             create-verticesAS 1
+               [set myneighbors n-of 0 turtles ;;empty
+                set xcor item 0 location
+                set ycor item 1 location
+                set size 0.2
+                set shape "circle"
+                set color brown
+                set hidden? true
+             ;; create link to previous node
+              ifelse previous-node-pt = nobody
+                 [] ; first vertex in feature
+                 [create-NodoAS-with previous-node-pt] ; create link to previous node
+                  set previous-node-pt self]
+               ;]
+           ] ] ] ]
+ delete-duplicatesAS
+ delete-not-connectedAS
+    ask links [set thickness 0.5 set color blue set hidden? true]
+
 end
 to drawBomberos
  foreach gis:feature-list-of BOMBEROS-dataset [ ?1 ->
@@ -924,10 +1147,28 @@ to drawBomberos
                 set size 1
                 set shape "fire department"
                 set color red
-                ;; create link to previous node
+                ;set hidden? true
+             ;; create link to previous node
                 ]
            ] ] ] ]
-  ;delete-duplicatesESTABOM
+  ask verticesESTABOM [create-nodosESTABOM-with other verticesAP in-radius 2]
+  ask nodosESTABOM [set thickness 0.5 set color white
+    set hidden? true
+  ]
+end
+to drawCenSalalt
+  gis:create-turtles-from-points CENTROSSALUD-dataset hospitalesCENSAL [
+                set size 1
+                set shape "hospital"
+                set color red
+                ]
+end
+to drawISSTEalt
+  gis:create-turtles-from-points ISSSTE-dataset hospitalesISSSTE [
+                set size 1
+                set shape "hospital"
+                set color green
+                ]
 end
 to drawCenSal
  foreach gis:feature-list-of CENTROSSALUD-dataset [ ?1 ->
@@ -950,12 +1191,16 @@ to drawCenSal
                 set size 1
                 set shape "hospital"
                 set color red
+                ;set hidden? true
              ;; create link to previous node
                 ]
            ] ] ] ]
-  ;delete-duplicatesCENSAL
+  ask verticesCENSAL [create-nodosCENSAL-with other verticesAP in-radius 2]
+  ask nodosCENSAL [set thickness 0.5 set color white
+    set hidden? true
+  ]
 end
-to drawISSSTE
+to drawISSTE
  foreach gis:feature-list-of ISSSTE-dataset [ ?1 ->
     foreach gis:vertex-lists-of ?1 ; for the road feature, get the list of vertices
        [ ??1 ->
@@ -969,17 +1214,21 @@ to drawISSSTE
             ;ifelse any? vertices with [(xcor = item 0 location and ycor = item 1 location) ] ; if there is not a road-vertex here already
              ;[]
              ;[
-             create-verticesISSSTE 1
+             create-verticesISSTE 1
                [set myneighbors n-of 0 turtles ;;empty
                 set xcor item 0 location
                 set ycor item 1 location
                 set size 1
                 set shape "hospital"
                 set color green
+                ;set hidden? true
              ;; create link to previous node
                 ]
            ] ] ] ]
-  ;delete-duplicatesISSSTE
+  ask verticesISSTE [create-nodosISSTE-with other verticesAP in-radius 2]
+  ask nodosISSTE [set thickness 0.5 set color white
+    set hidden? true
+  ]
 end
 to drawL1Norte
   foreach gis:feature-list-of L1-dataset [ ?1 ->
@@ -999,16 +1248,16 @@ to drawL1Norte
                [set myneighbors n-of 0 turtles ;;empty
                 set xcor item 0 location
                 set ycor item 1 location
-                set size 0.5
+                set size 0.2
                 set shape "circle"
                 set color brown
                 set hidden? true
-
+               ; set nombre [nombre] of terminalesL1-here
               ;; create link to previous node
               ifelse previous-node-pt = nobody
                  [] ; first vertex in feature
-                 [create-EnlaceL1Norte-from previous-node-pt [set hidden? true] ] ; create link to previous node
-                set previous-node-pt self ]
+                 [create-NodoL1Norte-from previous-node-pt] ; create link to previous node
+                  set previous-node-pt self]
                ;]
            ] ] ] ]
 
@@ -1039,19 +1288,22 @@ to drawL1Sur
               ;; create link to previous node
               ifelse previous-node-pt = nobody
                  [] ; first vertex in feature
-                 [create-EnlaceL1Sur-to previous-node-pt  [set hidden? true]] ; create link to previous node
-                set previous-node-pt self]
+                 [create-NodoL1Sur-to previous-node-pt] ; create link to previous node
+                  set previous-node-pt self]
                ;]
            ] ] ] ]
 
 end
 to drawL1
- gis:set-drawing-color 135
+  gis:set-drawing-color 135
  gis:draw L1-dataset 3
  gis:draw L1-estaciones-dataset 3
 ;;;;;;;Dibujando L1 y colocando trenes y terminales
 drawL1Norte
 drawL1Sur
+ask links [set thickness 0.1 set color white
+    set hidden? true
+  ]
 end
 to drawL2Norte
   foreach gis:feature-list-of L2-dataset [ ?1 ->
@@ -1079,7 +1331,7 @@ to drawL2Norte
               ;; create link to previous node
               ifelse previous-node-pt = nobody
                  [] ; first vertex in feature
-                 [create-EnlaceL2Norte-from previous-node-pt [set hidden? true]] ; create link to previous node
+                 [create-NodoL2Norte-from previous-node-pt] ; create link to previous node
                   set previous-node-pt self]
                ;]
            ] ] ] ]
@@ -1110,7 +1362,7 @@ to drawL2Sur
               ;; create link to previous node
               ifelse previous-node-pt = nobody
                  [] ; first vertex in feature
-                 [create-EnlaceL2Sur-to previous-node-pt [set hidden? true]] ; create link to previous node
+                 [create-NodoL2Sur-to previous-node-pt] ; create link to previous node
                   set previous-node-pt self]
                ;]
            ] ] ] ]
@@ -1122,6 +1374,7 @@ to drawL2
 ;;;;;;;Dibujando L2 y colocando trenes y terminales
  drawL2Norte
  drawL2Sur
+     ask links [set thickness 0.5 set color blue set hidden? true ]
 end
 to drawL3Norte
   foreach gis:feature-list-of L3-dataset [ ?1 ->
@@ -1149,7 +1402,7 @@ to drawL3Norte
               ;; create link to previous node
               ifelse previous-node-pt = nobody
                  [] ; first vertex in feature
-                 [create-EnlaceL3Norte-from previous-node-pt [set hidden? true]] ; create link to previous node
+                 [create-NodoL3Norte-from previous-node-pt] ; create link to previous node
                   set previous-node-pt self]
                ;]
            ] ] ] ]
@@ -1180,7 +1433,7 @@ to drawL3Sur
               ;; create link to previous node
               ifelse previous-node-pt = nobody
                  [] ; first vertex in feature
-                 [create-EnlaceL3Sur-to previous-node-pt [set hidden? true]] ; create link to previous node
+                 [create-NodoL3Sur-to previous-node-pt] ; create link to previous node
                   set previous-node-pt self]
                ;]
            ] ] ] ]
@@ -1192,6 +1445,7 @@ to drawL3
 ;;;;;;;Dibujando L3 y colocando trenes y terminales
 drawL3Norte
 drawL3Sur
+     ask links [set thickness 0.5 set color blue set hidden? true]
 end
 to drawL4Norte
   foreach gis:feature-list-of L4-dataset [ ?1 ->
@@ -1219,7 +1473,7 @@ to drawL4Norte
               ;; create link to previous node
               ifelse previous-node-pt = nobody
                  [] ; first vertex in feature
-                 [create-EnlaceL4Norte-from previous-node-pt [set hidden? true]] ; create link to previous node
+                 [create-NodoL4Norte-from previous-node-pt] ; create link to previous node
                   set previous-node-pt self]
                ;]
            ] ] ] ]
@@ -1250,7 +1504,7 @@ to drawL4Sur
               ;; create link to previous node
               ifelse previous-node-pt = nobody
                  [] ; first vertex in feature
-                 [create-EnlaceL4Sur-to previous-node-pt [set hidden? true]] ; create link to previous node
+                 [create-NodoL4Sur-to previous-node-pt] ; create link to previous node
                   set previous-node-pt self]
                ;]
            ] ] ] ]
@@ -1262,6 +1516,7 @@ to drawL4
 ;;;;;;;Dibujando L4 y colocando trenes y terminales
 drawL4Norte
 drawL4Sur
+     ask links [set thickness 0.5 set color blue set hidden? true]
 end
 to drawL5Norte
   foreach gis:feature-list-of L5-dataset [ ?1 ->
@@ -1289,7 +1544,7 @@ to drawL5Norte
               ;; create link to previous node
               ifelse previous-node-pt = nobody
                  [] ; first vertex in feature
-                 [create-EnlaceL5Norte-from previous-node-pt [set hidden? true]] ; create link to previous node
+                 [create-NodoL5Norte-from previous-node-pt] ; create link to previous node
                   set previous-node-pt self]
                ;]
            ] ] ] ]
@@ -1320,7 +1575,7 @@ to drawL5Sur
               ;; create link to previous node
               ifelse previous-node-pt = nobody
                  [] ; first vertex in feature
-                 [create-EnlaceL5Sur-to previous-node-pt [set hidden? true]] ; create link to previous node
+                 [create-NodoL5Sur-to previous-node-pt] ; create link to previous node
                   set previous-node-pt self]
                ;]
            ] ] ] ]
@@ -1332,6 +1587,7 @@ to drawL5
 ;;;;;;;Dibujando L5 y colocando trenes y terminales
 drawL5Norte
 drawL5Sur
+     ask links [set thickness 0.5 set color blue set hidden? true]
 end
 to drawL6Norte
   foreach gis:feature-list-of L6-dataset [ ?1 ->
@@ -1359,7 +1615,7 @@ to drawL6Norte
               ;; create link to previous node
               ifelse previous-node-pt = nobody
                  [] ; first vertex in feature
-                 [create-EnlaceL6Norte-from previous-node-pt [set hidden? true]] ; create link to previous node
+                 [create-NodoL6Norte-from previous-node-pt] ; create link to previous node
                   set previous-node-pt self]
                ;]
            ] ] ] ]
@@ -1390,7 +1646,7 @@ to drawL6Sur
               ;; create link to previous node
               ifelse previous-node-pt = nobody
                  [] ; first vertex in feature
-                 [create-EnlaceL6Sur-to previous-node-pt [set hidden? true]] ; create link to previous node
+                 [create-NodoL6Sur-to previous-node-pt] ; create link to previous node
                   set previous-node-pt self]
                ;]
            ] ] ] ]
@@ -1402,6 +1658,7 @@ to drawL6
 ;;;;;;;Dibujando L6 y colocando trenes y terminales
 drawL6Norte
 drawL6Sur
+     ask links [set thickness 0.5 set color blue set hidden? true]
 end
 to drawL7Norte
   foreach gis:feature-list-of L7-dataset [ ?1 ->
@@ -1429,7 +1686,7 @@ to drawL7Norte
               ;; create link to previous node
               ifelse previous-node-pt = nobody
                  [] ; first vertex in feature
-                 [create-EnlaceL7Norte-from previous-node-pt [set hidden? true]] ; create link to previous node
+                 [create-NodoL7Norte-from previous-node-pt] ; create link to previous node
                   set previous-node-pt self]
                ;]
            ] ] ] ]
@@ -1460,7 +1717,7 @@ to drawL7Sur
               ;; create link to previous node
               ifelse previous-node-pt = nobody
                  [] ; first vertex in feature
-                 [create-EnlaceL7Sur-to previous-node-pt [set hidden? true]] ; create link to previous node
+                 [create-NodoL7Sur-to previous-node-pt] ; create link to previous node
                   set previous-node-pt self]
                ;]
            ] ] ] ]
@@ -1472,6 +1729,7 @@ to drawL7
 ;;;;;;;Dibujando L7 y colocando trenes y terminales
 drawL7Norte
 drawL7Sur
+     ask links [set thickness 0.5 set color blue set hidden? true]
 end
 to drawL8Norte
   foreach gis:feature-list-of L8-dataset [ ?1 ->
@@ -1499,7 +1757,7 @@ to drawL8Norte
               ;; create link to previous node
               ifelse previous-node-pt = nobody
                  [] ; first vertex in feature
-                 [create-EnlaceL8Norte-from previous-node-pt [set hidden? true]] ; create link to previous node
+                 [create-NodoL8Norte-from previous-node-pt] ; create link to previous node
                   set previous-node-pt self]
                ;]
            ] ] ] ]
@@ -1530,7 +1788,7 @@ to drawL8Sur
               ;; create link to previous node
               ifelse previous-node-pt = nobody
                  [] ; first vertex in feature
-                 [create-EnlaceL8Sur-to previous-node-pt [set hidden? true]] ; create link to previous node
+                 [create-NodoL8Sur-to previous-node-pt] ; create link to previous node
                   set previous-node-pt self]
                ;]
            ] ] ] ]
@@ -1542,7 +1800,8 @@ to drawL8
 ;;;;;;;Dibujando L8 y colocando trenes y terminales
 drawL8Norte
 drawL8Sur
- end
+     ask links [set thickness 0.5 set color blue set hidden? true]
+end
 to drawL9Norte
   foreach gis:feature-list-of L9-dataset [ ?1 ->
     foreach gis:vertex-lists-of ?1 ; for the road feature, get the list of vertices
@@ -1569,7 +1828,7 @@ to drawL9Norte
               ;; create link to previous node
               ifelse previous-node-pt = nobody
                  [] ; first vertex in feature
-                 [create-EnlaceL9Norte-from previous-node-pt [set hidden? true]] ; create link to previous node
+                 [create-NodoL9Norte-from previous-node-pt] ; create link to previous node
                   set previous-node-pt self]
                ;]
            ] ] ] ]
@@ -1600,7 +1859,7 @@ to drawL9Sur
               ;; create link to previous node
               ifelse previous-node-pt = nobody
                  [] ; first vertex in feature
-                 [create-EnlaceL9Sur-to previous-node-pt [set hidden? true]] ; create link to previous node
+                 [create-NodoL9Sur-to previous-node-pt] ; create link to previous node
                   set previous-node-pt self]
                ;]
            ] ] ] ]
@@ -1612,6 +1871,7 @@ to drawL9
 ;;;;;;;Dibujando L9 y colocando trenes y terminales
 drawL9Norte
 drawL9Sur
+     ask links [set thickness 0.5 set color blue set hidden? true]
 end
 to drawLANorte
   foreach gis:feature-list-of LA-dataset [ ?1 ->
@@ -1639,7 +1899,7 @@ to drawLANorte
               ;; create link to previous node
               ifelse previous-node-pt = nobody
                  [] ; first vertex in feature
-                 [create-EnlaceLANorte-from previous-node-pt [set hidden? true]] ; create link to previous node
+                 [create-NodoLANorte-from previous-node-pt] ; create link to previous node
                   set previous-node-pt self]
                ;]
            ] ] ] ]
@@ -1670,7 +1930,7 @@ to drawLASur
               ;; create link to previous node
               ifelse previous-node-pt = nobody
                  [] ; first vertex in feature
-                 [create-EnlaceLASur-to previous-node-pt [set hidden? true]] ; create link to previous node
+                 [create-NodoLASur-to previous-node-pt] ; create link to previous node
                   set previous-node-pt self]
                ;]
            ] ] ] ]
@@ -1682,6 +1942,7 @@ to drawLA
 ;;;;;;;Dibujando LA y colocando trenes y terminales
 drawLANorte
 drawLASur
+     ask links [set thickness 0.5 set color blue set hidden? true]
 end
 to drawLBNorte
   foreach gis:feature-list-of LB-dataset [ ?1 ->
@@ -1709,7 +1970,7 @@ to drawLBNorte
               ;; create link to previous node
               ifelse previous-node-pt = nobody
                  [] ; first vertex in feature
-                 [create-EnlaceLBNorte-from previous-node-pt [set hidden? true]] ; create link to previous node
+                 [create-NodoLBNorte-from previous-node-pt] ; create link to previous node
                   set previous-node-pt self]
                ;]
            ] ] ] ]
@@ -1740,7 +2001,7 @@ to drawLBSur
               ;; create link to previous node
               ifelse previous-node-pt = nobody
                  [] ; first vertex in feature
-                 [create-EnlaceLBSur-to previous-node-pt [set hidden? true]] ; create link to previous node
+                 [create-NodoLBSur-to previous-node-pt] ; create link to previous node
                   set previous-node-pt self]
                ;]
            ] ] ] ]
@@ -1752,7 +2013,7 @@ to drawLB
 ;;;;;;;Dibujando LB y colocando trenes y terminales
 drawLBNorte
 drawLBSur
-
+     ask links [set thickness 0.5 set color blue set hidden? true]
 end
 to drawL12Norte
   foreach gis:feature-list-of L12-dataset [ ?1 ->
@@ -1780,7 +2041,7 @@ to drawL12Norte
               ;; create link to previous node
               ifelse previous-node-pt = nobody
                  [] ; first vertex in feature
-                 [create-EnlaceL12Norte-from previous-node-pt [set hidden? true]] ; create link to previous node
+                 [create-NodoL12Norte-from previous-node-pt] ; create link to previous node
                   set previous-node-pt self]
                ;]
            ] ] ] ]
@@ -1811,7 +2072,7 @@ to drawL12Sur
               ;; create link to previous node
               ifelse previous-node-pt = nobody
                  [] ; first vertex in feature
-                 [create-EnlaceL12Sur-to previous-node-pt [set hidden? true]] ; create link to previous node
+                 [create-NodoL12Sur-to previous-node-pt] ; create link to previous node
                   set previous-node-pt self]
                ;]
            ] ] ] ]
@@ -1823,7 +2084,9 @@ gis:set-drawing-color 36
 ;;;;;;;Dibujando L12 y colocando trenes y terminales
 drawL12Norte
 drawL12Sur
+     ask links [set thickness 0.5 set color blue set hidden? true]
 end
+
 to clear
     clear-all
   reset-ticks
@@ -1838,32 +2101,35 @@ to setup
   if show_Mapas? [
      showMapas
   ]
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Mostrar avenidas primarias y dibujar la red con agentes y colocar coches
 
   if show_Avenidas_Principales?[
      drawAP
+     create-the-cars-AP
   ]
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Mostrar avenidas secundarias y dibujar la red con agentes y colochar coches
 
   if show_Avenidas_Secundarias?[
      drawAS
+     create-the-cars-AS
   ]
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;Mostrar linea 1 y dibujarla con agentes y colocar trenes
 
   if show_L1?[
      drawL1
      create-the-trenes-SL1
      create-the-trenes-NL1
-    set promedio_ruta_L1_hosp []
-    set promedio_ruta_L1_bom []
   ]
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Mostrar linea 2 y dibujarla con agentes
+
   if show_L2?[
      drawL2
      create-the-trenes-SL2
      create-the-trenes-NL2
-    set promedio_ruta_L2_hosp []
-    set promedio_ruta_L2_bom []
     ]
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Mostrar linea 3 y dibujarla con agentes
@@ -1872,8 +2138,6 @@ to setup
      drawL3
      create-the-trenes-SL3
      create-the-trenes-NL3
-    set promedio_ruta_L3_hosp []
-    set promedio_ruta_L3_bom []
   ]
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Mostrar linea 4 y dibujarla con agentes
@@ -1882,8 +2146,6 @@ to setup
      drawL4
      create-the-trenes-SL4
      create-the-trenes-NL4
-    set promedio_ruta_L4_hosp []
-    set promedio_ruta_L4_bom []
   ]
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Mostrar linea 5 y dibujarla con agentes
@@ -1892,8 +2154,6 @@ to setup
      drawL5
      create-the-trenes-SL5
      create-the-trenes-NL5
-    set promedio_ruta_L5_hosp []
-    set promedio_ruta_L5_bom []
   ]
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Mostrar linea 6 y dibujarla con agentes
@@ -1902,8 +2162,6 @@ to setup
      drawL6
      create-the-trenes-SL6
      create-the-trenes-NL6
-    set promedio_ruta_L6_hosp []
-    set promedio_ruta_L6_bom []
   ]
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Mostrar linea 7 y dibujarla con agentes
@@ -1912,8 +2170,6 @@ to setup
      drawL7
      create-the-trenes-SL7
      create-the-trenes-NL7
-    set promedio_ruta_L7_hosp []
-    set promedio_ruta_L7_bom []
   ]
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Mostrar linea 8 y dibujarla con agentes
@@ -1922,8 +2178,6 @@ to setup
      drawL8
      create-the-trenes-SL8
      create-the-trenes-NL8
-    set promedio_ruta_L8_hosp []
-    set promedio_ruta_L8_bom []
   ]
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Mostrar linea 9 y dibujarla con agentes
@@ -1932,8 +2186,6 @@ to setup
      drawL9
      create-the-trenes-SL9
      create-the-trenes-NL9
-    set promedio_ruta_L9_hosp []
-    set promedio_ruta_L9_bom []
   ]
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Mostrar linea 12 y dibujarla con agentes
@@ -1942,8 +2194,6 @@ to setup
      drawL12
      create-the-trenes-SL12
      create-the-trenes-NL12
-    set promedio_ruta_L12_hosp []
-    set promedio_ruta_L12_bom []
   ]
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Mostrar linea A y dibujarla con agentes
@@ -1952,8 +2202,6 @@ to setup
      drawLA
      create-the-trenes-SLA
      create-the-trenes-NLA
-    set promedio_ruta_LA_hosp []
-    set promedio_ruta_LA_bom []
   ]
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Mostrar linea B y dibujarla con agentes
@@ -1962,8 +2210,6 @@ to setup
      drawLB
      create-the-trenes-SLB
      create-the-trenes-NLB
-    set promedio_ruta_LB_hosp []
-    set promedio_ruta_LB_bom []
   ]
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Mostrar bomberos
@@ -1975,7 +2221,7 @@ to setup
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Mostrar ISSTE
 
   if show_ISSSTE?[
-     drawISSSTE
+     drawISSTE
   ]
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Mostrar Centros Salud
@@ -1984,6 +2230,7 @@ to setup
      drawCenSal
   ]
 end
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Funciones para hacer zoom
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Zoom L1
 to zoom_L1
@@ -1999,12 +2246,13 @@ clear-all
   ]
   if show_Avenidas_Secundarias?[
    drawAS
+   create-the-cars-AS
    ]
 
 ;;;;;;;Dibujando red de avenidas principales y colocando coches
   if show_Avenidas_Principales?[
    drawAP
-    ;create-the-cars-AP
+    create-the-cars-AP
     ]
 
   if show_Bomberos?[
@@ -2012,7 +2260,7 @@ clear-all
   ]
 
   if show_ISSSTE?[
-  drawISSSTE
+  drawISSTE
   ]
 
   if show_Centros_Salud?[
@@ -2021,9 +2269,9 @@ clear-all
 drawL1
 create-the-trenes-SL1
 create-the-trenes-NL1
-set promedio_ruta_L1_hosp []
-set promedio_ruta_L1_bom []
+  ;separate-the-trenes-L1
 end
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Zoom L2
 to zoom_L2
   clear-all
@@ -2037,18 +2285,20 @@ to zoom_L2
 
   if show_Avenidas_Secundarias?[
      drawAS
+     create-the-cars-AS
   ]
 
   if show_Avenidas_Principales?[
      drawAP
-       ]
+     create-the-cars-AP
+  ]
 
  if show_Bomberos?[
     drawBomberos
   ]
 
   if show_ISSSTE?[
-     drawISSSTE
+     drawISSTE
   ]
 
   if show_Centros_Salud?[
@@ -2057,9 +2307,8 @@ to zoom_L2
 drawL2
 create-the-trenes-SL2
 create-the-trenes-NL2
-  set promedio_ruta_L2_hosp []
-    set promedio_ruta_L2_bom []
 end
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Zoom L3
 to zoom_L3
    clear-all
@@ -2073,18 +2322,20 @@ to zoom_L3
 
   if show_Avenidas_Secundarias?[
      drawAS
+     create-the-cars-AS
   ]
 
   if show_Avenidas_Principales?[
      drawAP
-      ]
+    create-the-cars-AP
+  ]
 
  if show_Bomberos?[
     drawBomberos
   ]
 
   if show_ISSSTE?[
-     drawISSSTE
+     drawISSTE
   ]
 
   if show_Centros_Salud?[
@@ -2093,9 +2344,8 @@ to zoom_L3
 drawL3
 create-the-trenes-SL3
 create-the-trenes-NL3
-  set promedio_ruta_L3_hosp []
-    set promedio_ruta_L3_bom []
 end
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Zoom L4
 to zoom_L4
    clear-all
@@ -2109,18 +2359,20 @@ to zoom_L4
 
   if show_Avenidas_Secundarias?[
      drawAS
+     create-the-cars-AS
   ]
 
   if show_Avenidas_Principales?[
      drawAP
-      ]
+    create-the-cars-AP
+  ]
 
  if show_Bomberos?[
     drawBomberos
   ]
 
   if show_ISSSTE?[
-     drawISSSTE
+     drawISSTE
   ]
 
   if show_Centros_Salud?[
@@ -2129,9 +2381,8 @@ to zoom_L4
 drawL4
 create-the-trenes-SL4
 create-the-trenes-NL4
-  set promedio_ruta_L4_hosp []
-    set promedio_ruta_L4_bom []
 end
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Zoom L5
 to zoom_L5
    clear-all
@@ -2145,18 +2396,20 @@ to zoom_L5
 
   if show_Avenidas_Secundarias?[
      drawAS
+     create-the-cars-AS
   ]
 
   if show_Avenidas_Principales?[
      drawAP
-       ]
+     create-the-cars-AP
+  ]
 
   if show_Bomberos?[
      drawBomberos
   ]
 
   if show_ISSSTE?[
-     drawISSSTE
+     drawISSTE
   ]
 
   if show_Centros_Salud?[
@@ -2165,9 +2418,8 @@ to zoom_L5
 drawL5
 create-the-trenes-SL5
 create-the-trenes-NL5
-  set promedio_ruta_L5_hosp []
-    set promedio_ruta_L5_bom []
 end
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Zoom L6
 to zoom_L6
    clear-all
@@ -2181,18 +2433,20 @@ to zoom_L6
 
   if show_Avenidas_Secundarias?[
      drawAS
+     create-the-cars-AS
   ]
 
   if show_Avenidas_Principales?[
      drawAP
-       ]
+     create-the-cars-AP
+  ]
 
  if show_Bomberos?[
     drawBomberos
   ]
 
   if show_ISSSTE?[
-     drawISSSTE
+     drawISSTE
   ]
 
   if show_Centros_Salud?[
@@ -2202,9 +2456,8 @@ to zoom_L6
 drawL6
 create-the-trenes-SL6
 create-the-trenes-NL6
-  set promedio_ruta_L6_hosp []
-    set promedio_ruta_L6_bom []
 end
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Zoom L7
 to zoom_L7
    clear-all
@@ -2218,18 +2471,20 @@ to zoom_L7
 
   if show_Avenidas_Secundarias?[
      drawAS
+     create-the-cars-AS
   ]
 
   if show_Avenidas_Principales?[
      drawAP
-       ]
+     create-the-cars-AP
+  ]
 
  if show_Bomberos?[
     drawBomberos
   ]
 
   if show_ISSSTE?[
-     drawISSSTE
+     drawISSTE
   ]
 
   if show_Centros_Salud?[
@@ -2239,9 +2494,8 @@ to zoom_L7
 drawL7
 create-the-trenes-SL7
 create-the-trenes-NL7
-  set promedio_ruta_L7_hosp []
-    set promedio_ruta_L7_bom []
 end
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Zoom L8
 to zoom_L8
    clear-all
@@ -2255,18 +2509,20 @@ to zoom_L8
 
   if show_Avenidas_Secundarias?[
      drawAS
+     create-the-cars-AS
   ]
 
   if show_Avenidas_Principales?[
      drawAP
-       ]
+     create-the-cars-AP
+  ]
 
   if show_Bomberos?[
      drawBomberos
   ]
 
   if show_ISSSTE?[
-     drawISSSTE
+     drawISSTE
   ]
 
   if show_Centros_Salud?[
@@ -2275,9 +2531,8 @@ to zoom_L8
 drawL8
 create-the-trenes-SL8
 create-the-trenes-NL8
-  set promedio_ruta_L8_hosp []
-    set promedio_ruta_L8_bom []
 end
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Zoom L9
 to zoom_L9
    clear-all
@@ -2291,18 +2546,20 @@ to zoom_L9
 
   if show_Avenidas_Secundarias?[
      drawAS
+     create-the-cars-AS
   ]
 
   if show_Avenidas_Principales?[
      drawAP
-       ]
+     create-the-cars-AP
+  ]
 
   if show_Bomberos?[
     drawBomberos
   ]
 
   if show_ISSSTE?[
-     drawISSSTE
+     drawISSTE
   ]
 
   if show_Centros_Salud?[
@@ -2311,9 +2568,8 @@ to zoom_L9
 drawL9
 create-the-trenes-SL9
 create-the-trenes-NL9
-  set promedio_ruta_L9_hosp []
-    set promedio_ruta_L9_bom []
 end
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Zoom L12
 to zoom_L12
    clear-all
@@ -2327,28 +2583,26 @@ to zoom_L12
 
   if show_Avenidas_Secundarias?[
      drawAS
+     create-the-cars-AS
   ]
 
   if show_Avenidas_Principales?[
      drawAP
-       ]
+     create-the-cars-AP
+  ]
 
   if show_ISSSTE?[
-     drawISSSTE
+     drawISSTE
   ]
 
   if show_Centros_Salud?[
      drawCenSal
   ]
- if show_Bomberos?[
-    drawBomberos
-  ]
 drawL12
 create-the-trenes-SL12
 create-the-trenes-NL12
-  set promedio_ruta_L12_hosp []
-    set promedio_ruta_L12_bom []
 end
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Zoom LA
 to zoom_LA
    clear-all
@@ -2362,18 +2616,20 @@ to zoom_LA
 
   if show_Avenidas_Secundarias?[
      drawAS
+     create-the-cars-AS
   ]
 
   if show_Avenidas_Principales?[
      drawAP
-       ]
+     create-the-cars-AP
+  ]
 
   if show_Bomberos?[
      drawBomberos
   ]
 
   if show_ISSSTE?[
-     drawISSSTE
+     drawISSTE
   ]
 
   if show_Centros_Salud?[
@@ -2382,9 +2638,8 @@ to zoom_LA
 drawLA
 create-the-trenes-SLA
 create-the-trenes-NLA
-  set promedio_ruta_LA_hosp []
-    set promedio_ruta_LA_bom []
 end
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Zoom LB
 to zoom_LB
    clear-all
@@ -2398,18 +2653,20 @@ to zoom_LB
 
   if show_Avenidas_Secundarias?[
      drawAS
+     create-the-cars-AS
   ]
 
   if show_Avenidas_Principales?[
      drawAP
-       ]
+     create-the-cars-AP
+  ]
 
    if show_Bomberos?[
       drawBomberos
   ]
 
   if show_ISSSTE?[
-     drawISSSTE
+     drawISSTE
   ]
 
   if show_Centros_Salud?[
@@ -2418,400 +2675,135 @@ to zoom_LB
 drawLB
 create-the-trenes-SLB
 create-the-trenes-NLB
-  set promedio_ruta_LB_hosp []
-    set promedio_ruta_LB_bom []
 end
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Funcion de movimiento de trenes
-to movimiento_trenes
-ask trenes[
 
-    ifelse (descompuesto? = true) [stop] [
-      set prob_CC random-float 100 if prob_CC = 0 [ set prob_CC random-float 100]
-      set prob_heridos random-float 100 if prob_heridos = 0 [ set prob_heridos random-float 100]
-      set prob_incendio random-float 100 if prob_incendio = 0 [set prob_incendio random-float 100 ]
-    set newnode one-of [out-link-neighbors] of mynode
-      ifelse (newnode = nobody) [renueva] [face newnode ifelse (prob_cc) <= probabilidad_corto_circuito and (prob_cc) != 0 [
-        set descompuesto? true
-        contarincidentesSTC
-        set previouscolor color
-        set color yellow
-        clear-output
-        output-type "Se descompuso tren" output-type " " output-type who output-type ". " output-type "Con dirección " output-type direccion
-
-
-        (ifelse (prob_heridos) <= probabilidad_heridos and (prob_heridos) != 0 [set heridos? true crearDestin llamar_ambulancia if (prob_incendio) <= probabilidad_incendio and (prob_incendio) != 0 [set incendio? true crearDestin llamar_bomberos]]
-          (prob_incendio) <= probabilidad_incendio and (prob_incendio) != 0 [set incendio? true set heridos? false crearDestin llamar_bomberos][clear-output output-type "El tren ha sido reparado." set color previouscolor set descompuesto? false
-   set prob_CC random-float 100 if prob_CC = 0 [ set prob_CC random-float 100]
-      set prob_heridos random-float 100 if prob_heridos = 0 [ set prob_heridos random-float 100]
-      set prob_incendio random-float 100 if prob_incendio = 0 [set prob_incendio random-float 100 ] ])][move-to newnode]]
-      set previousnode mynode
-      set mynode newnode]
-  ]
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;Funciones temporales del algoritmo Dijkstra
+to create-complete-graph
+  ask links [die]
+  ask turtles [create-links-with other turtles]
 end
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Funciones auxiliares para movimiento de trenes
-to crearDestin
-hatch-verticesAP 1 [
-          set Destin who
-          set color white
-          set shape "triangle"
-          set hidden? true
-          set size 1
-          create-EnlaceAP-with min-one-of other verticesAP [distance myself]
-        ]
-end
-to contarincidentesSTC
-  if linea = "1" [set IncidentesL1 IncidentesL1 + 1]
-  if linea = "2" [set IncidentesL2 IncidentesL2 + 1]
-  if linea = "3" [set IncidentesL3 IncidentesL3 + 1]
-  if linea = "4" [set IncidentesL4 IncidentesL4 + 1]
-  if linea = "5" [set IncidentesL5 IncidentesL5 + 1]
-  if linea = "6" [set IncidentesL6 IncidentesL6 + 1]
-  if linea = "7" [set IncidentesL7 IncidentesL7 + 1]
-  if linea = "8" [set IncidentesL8 IncidentesL8 + 1]
-  if linea = "9" [set IncidentesL9 IncidentesL9 + 1]
-  if linea = "A" [set IncidentesLA IncidentesLA + 1]
-  if linea = "B" [set IncidentesLB IncidentesLB + 1]
-  if linea = "12" [set IncidentesL12 IncidentesL12 + 1]
-  set IncidentesTotales (IncidentesL1 + IncidentesL2 + IncidentesL3 + IncidentesL4 + IncidentesL5 + IncidentesL6 + IncidentesL7 + IncidentesL8 + IncidentesL9 + IncidentesLA + IncidentesLB + IncidentesL12)
 
+to create-random-graph
+  ask links [die]
+  ask turtles [create-links-with n-of ((random Max_Connections) + 1) other turtles]
 end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Movimiento 1
 to renueva
-  if direccion = "Pantitlán L1" [hatch-trenes 1 [
+  if color = red [hatch-trenes 1 [
           set color white
-          set direccion "Observatorio L1"
           set shape "train passenger car"
           ;set hidden? true
           set size 2
           set prob_CC 100
           set pasajeros random 1000 + 100
           set mynode one-of verticesSL1-here ]  die]
-    if direccion = "Observatorio L1" [hatch-trenes 1 [
-          set color red
-          set direccion "Pantitlán L1"
+    if color = white [hatch-trenes 1 [
+           set color red
           set shape "train passenger car"
           ;set hidden? true
           set size 2
           set prob_CC 100
           set pasajeros random 1000 + 100
           set mynode one-of verticesNL1-here ]  die]
-    if direccion = "Taxqueña L2" [hatch-trenes 1 [
-          set color white
-          set direccion "Cuatro Caminos L2"
-          set shape "train passenger car"
-          ;set hidden? true
-          set size 2
-          set prob_CC 100
-          set pasajeros random 1000 + 100
-          set mynode one-of verticesNL2-here ]  die]
-    if direccion = "Cuatro Caminos L2" [hatch-trenes 1 [
-           set color red
-           set direccion "Taxqueña L2"
-          set shape "train passenger car"
-          ;set hidden? true
-          set size 2
-          set prob_CC 100
-          set pasajeros random 1000 + 100
-          set mynode one-of verticesSL2-here ]  die]
-  if direccion = "Universidad L3" [hatch-trenes 1 [
-          set color white
-          set direccion "Indios Verdes L3"
-          set shape "train passenger car"
-          ;set hidden? true
-          set size 2
-          set prob_CC 100
-          set pasajeros random 1000 + 100
-          set mynode one-of verticesNL3-here]  die]
-    if direccion = "Indios Verdes L3" [hatch-trenes 1 [
-           set color red
-           set direccion "Universidad L3"
-          set shape "train passenger car"
-          ;set hidden? true
-          set size 2
-          set prob_CC 100
-          set pasajeros random 1000 + 100
-          set mynode one-of verticesSL3-here]  die]
-  if direccion = "Martín Carrera L4" [hatch-trenes 1 [
-          set color white
-          set direccion "Santa Anita L4"
-          set shape "train passenger car"
-          ;set hidden? true
-          set size 2
-          set prob_CC 100
-          set pasajeros random 1000 + 100
-          set mynode one-of verticesNL4-here]  die]
-    if direccion = "Santa Anita L4" [hatch-trenes 1 [
-           set color red
-           set direccion "Martín Carrera L4"
-          set shape "train passenger car"
-          ;set hidden? true
-          set size 2
-          set prob_CC 100
-          set pasajeros random 1000 + 100
-          set mynode one-of verticesSL4-here]  die]
-  if direccion = "Pantitlán L5" [hatch-trenes 1 [
-          set color white
-          set direccion "Politécnico L5"
-          set shape "train passenger car"
-          ;set hidden? true
-          set size 2
-          set prob_CC 100
-          set pasajeros random 1000 + 100
-          set mynode one-of verticesNL5-here]  die]
-    if direccion = "Politécnico L5" [hatch-trenes 1 [
-           set color red
-           set direccion "Pantitlán L5"
-          set shape "train passenger car"
-          ;set hidden? true
-          set size 2
-          set prob_CC 100
-          set pasajeros random 1000 + 100
-          set mynode one-of verticesSL5-here]  die]
-  if direccion = "Martín Carrera L6" [hatch-trenes 1 [
-          set color white
-          set direccion "El Rosario L6"
-          set shape "train passenger car"
-          ;set hidden? true
-          set size 2
-          set prob_CC 100
-          set pasajeros random 1000 + 100
-          set mynode one-of verticesNL6-here]  die]
-    if direccion = "El Rosario L6" [hatch-trenes 1 [
-           set color red
-           set direccion "Martín Carrera L6"
-          set shape "train passenger car"
-          ;set hidden? true
-          set size 2
-          set prob_CC 100
-          set pasajeros random 1000 + 100
-          set mynode one-of verticesSL6-here]  die]
-  if direccion = "Barranca Del Muerto L7" [hatch-trenes 1 [
-          set color white
-          set direccion "El Rosario L7"
-          set shape "train passenger car"
-          ;set hidden? true
-          set size 2
-          set prob_CC 100
-          set pasajeros random 1000 + 100
-          set mynode one-of verticesNL7-here]  die]
-    if direccion = "El Rosario L7" [hatch-trenes 1 [
-           set color red
-           set direccion "Barranca Del Muerto L7"
-          set shape "train passenger car"
-          ;set hidden? true
-          set size 2
-          set prob_CC 100
-          set pasajeros random 1000 + 100
-          set mynode one-of verticesSL7-here]  die]
-  if direccion = "Constitución de 1917 L8" [hatch-trenes 1 [
-          set color white
-          set direccion "Garibaldi/Lagunilla L8"
-          set shape "train passenger car"
-          ;set hidden? true
-          set size 2
-          set prob_CC 100
-          set pasajeros random 1000 + 100
-          set mynode one-of verticesNL8-here]  die]
-    if direccion = "Garibaldi/Lagunilla L8" [hatch-trenes 1 [
-           set color red
-           set direccion "Constitución de 1917 L8"
-          set shape "train passenger car"
-          ;set hidden? true
-          set size 2
-          set prob_CC 100
-          set pasajeros random 1000 + 100
-          set mynode one-of verticesSL8-here]  die]
-  if direccion = "Tacubaya L9" [hatch-trenes 1 [
-          set color white
-          set direccion "Pantitlán L9"
-          set shape "train passenger car"
-          ;set hidden? true
-          set size 2
-          set prob_CC 100
-          set pasajeros random 1000 + 100
-          set mynode one-of verticesNL9-here]  die]
-    if direccion = "Pantitlán L9" [hatch-trenes 1 [
-           set color red
-           set direccion "Tacubaya L9"
-          set shape "train passenger car"
-          ;set hidden? true
-          set size 2
-          set prob_CC 100
-          set pasajeros random 1000 + 100
-          set mynode one-of verticesSL9-here]  die]
-  if direccion = "La Paz LA" [hatch-trenes 1 [
-          set color white
-          set direccion "Pantitlán LA"
-          set shape "train passenger car"
-          ;set hidden? true
-          set size 2
-          set prob_CC 100
-          set pasajeros random 1000 + 100
-          set mynode one-of verticesNLA-here]  die]
-    if direccion = "Pantitlán LA" [hatch-trenes 1 [
-           set color red
-           set direccion "La Paz LA"
-          set shape "train passenger car"
-          ;set hidden? true
-          set size 2
-          set prob_CC 100
-          set pasajeros random 1000 + 100
-          set mynode one-of verticesSLA-here]  die]
-  if direccion = "Ciudad Azteca LB" [hatch-trenes 1 [
-          set color white
-          set direccion "Buenavista LB"
-          set shape "train passenger car"
-          ;set hidden? true
-          set size 2
-          set prob_CC 100
-          set pasajeros random 1000 + 100
-          set mynode one-of verticesNLB-here]  die]
-    if direccion = "Buenavista LB" [hatch-trenes 1 [
-           set color red
-           set direccion "Ciudad Azteca LB"
-          set shape "train passenger car"
-          ;set hidden? true
-          set size 2
-          set prob_CC 100
-          set pasajeros random 1000 + 100
-          set mynode one-of verticesSLB-here]  die]
-  if direccion = "Tláhuac L12" [hatch-trenes 1 [
-          set color white
-          set direccion "Mixcoac L12"
-          set shape "train passenger car"
-          ;set hidden? true
-          set size 2
-          set prob_CC 100
-          set pasajeros random 1000 + 100
-          set mynode one-of verticesNL12-here]  die]
-    if direccion = "Mixcoac L12" [hatch-trenes 1 [
-           set color red
-           set direccion "Tláhuac L12"
-          set shape "train passenger car"
-          ;set hidden? true
-          set size 2
-          set prob_CC 100
-          set pasajeros random 1000 + 100
-          set mynode one-of verticesSL12-here]  die]
   end
-to tren_reparado
-  clear-output
-  output-type "El tren ha sido reparado."
-  set color previouscolor
-  set descompuesto? false
-  set incendio? false
-  set heridos? false
-  set prob_CC random 100 if prob_CC = 0 [ set prob_CC random-float 100]
-      set prob_heridos random-float 100 if prob_heridos = 0 [ set prob_heridos random-float 100]
-      set prob_incendio random-float 100 if prob_incendio = 0 [set prob_incendio random-float 100 ]
-  ask turtle  Destin [die]
-  ask turtle Origin [die]
-  if any? ambulancias [ask ambulancias [die]]
-  if any? camiones_bomberos [ask camiones_bomberos [die]]
-  ask EnlacesAP [set color gray set thickness 0 set hidden? true]
+
+to reportar_info
 end
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Funciones de movimiento de ambulancias y camiones de bomberos
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Funcion auxiliar para movimiento de coches
+to buscarnodo
+  if newnode = previousnode  [set newnode one-of [link-neighbors] of mynode]
+end
+to movimiento_trenes
+  ask trenes[
+    ;;;;;;;;;;;;;;;;;;;atención aquí por esto vvvvv no se mueve descompuesto? = true
+    if count (trenes with [descompuesto? = true]) = 1 [stop]
+    ifelse (descompuesto? = true) [stop] [
+    set prob_CC random-float 100
+    set prob_heridos random 100
+    set prob_incendio random 100
+    set newnode one-of [out-link-neighbors] of mynode
+      ifelse (newnode = nobody) [renueva] [face newnode ifelse (prob_cc) <= probabilidad_corto_circuito [set descompuesto? true set previouscolor color set color yellow output-type "Se descompuso tren" output-type " " output-type who output-type ". "
+        hatch-AgentesDestino 1 [
+          set color white
+          set shape "triangle"
+          ;set hidden? true
+          set size 1
+          set mynode one-of verticesAP-here ]
+        (ifelse (prob_heridos) <= probabilidad_heridos [set heridos? true llamar_ambulancia] (prob_incendio) <= probabilidad_incendio [set incendio? true llamar_bomberos][wait 10 clear-output output-type "El tren ha sido reparado." set color previouscolor set descompuesto? false set prob_CC random-float 100
+    set prob_heridos random 100
+    set prob_incendio random 100 ])][move-to newnode]]
+      set previousnode mynode
+      set mynode newnode]
+  ]
+ ; heridos?
+  ;  incendio?
+end
 to llamar_ambulancia
-  set IncidentesAmbulancias IncidentesAmbulancias + 1
- ifelse show_ISSSTE? or show_Centros_Salud? [
 clear-output
   output-type "Se revisó el tren, hay heridos, llamando ambulancia." output-type " "
-  let prob_recursos_ISSSTE random 2
-  let prob_recursos_CENSAL random 2
-  ask verticesISSSTE [
-    ifelse ISSSTE_Resources = "low" [set recursos_ISSSTE random 2][ set recursos_ISSSTE 2 set prob_recursos_ISSSTE 2]
-    if prob_recursos_ISSSTE = recursos_ISSSTE [hatch-ambulancias 1 [
-          set color white
-          set shape "ambulance"
-          set size 1.5
-]]]
-  ask verticesCENSAL [
-    ifelse Centros_Salud_Resources = "low" [set recursos_CENSAL random 2][set recursos_CENSAL 2 set prob_recursos_CENSAL 2]
-    if prob_recursos_CENSAL = recursos_CENSAL  [hatch-ambulancias 1 [
-          set color white
-          set shape "ambulance"
-          set size 1.5
-]]]
-if show_Avenidas_Principales? = false   [user-message "Está desactivada la visualización de avenidas principales, no se puede calcular la ruta más corta" stop]
-ask turtle Destin [hatch-verticesAP 1 [ set shape "face happy" set size 1 set hidden? true move-to min-one-of ambulancias [distance myself] set Origin who create-EnlaceAP-with min-one-of other verticesAP [distance myself]]]
 
-  ]
-[user-message "Está desactivada la visualización de Hospitales" stop]
-if usar_rutina_Dijkstra? = true [create-shortest-path]
-let distancia_ruta []
-let ruta []
-ask turtle Origin [foreach (nw:path-to turtle Destin) [x -> ask x [ set distancia_ruta lput(link-length)  distancia_ruta]] set ruta nw:path-to turtle Destin]
-print (word "La ruta más corta entre el hospital más cercano y el incidente de la linea " linea " es: " ruta " para una distancia total de: " sum distancia_ruta)
-  if linea = "1" [set promedio_ruta_L1_hosp lput (sum distancia_ruta) promedio_ruta_L1_hosp set distancia_media_hospital_L1 mean promedio_ruta_L1_hosp]
-  if linea = "2" [set promedio_ruta_L2_hosp lput (sum distancia_ruta) promedio_ruta_L2_hosp set distancia_media_hospital_L2 mean promedio_ruta_L2_hosp]
-  if linea = "3" [set promedio_ruta_L3_hosp lput (sum distancia_ruta) promedio_ruta_L3_hosp set distancia_media_hospital_L3 mean promedio_ruta_L3_hosp]
-  if linea = "4" [set promedio_ruta_L4_hosp lput (sum distancia_ruta) promedio_ruta_L4_hosp set distancia_media_hospital_L4 mean promedio_ruta_L4_hosp]
-  if linea = "5" [set promedio_ruta_L5_hosp lput (sum distancia_ruta) promedio_ruta_L5_hosp set distancia_media_hospital_L5 mean promedio_ruta_L5_hosp]
-  if linea = "6" [set promedio_ruta_L6_hosp lput (sum distancia_ruta) promedio_ruta_L6_hosp set distancia_media_hospital_L6 mean promedio_ruta_L6_hosp]
-  if linea = "7" [set promedio_ruta_L7_hosp lput (sum distancia_ruta) promedio_ruta_L7_hosp set distancia_media_hospital_L7 mean promedio_ruta_L7_hosp]
-  if linea = "8" [set promedio_ruta_L8_hosp lput (sum distancia_ruta) promedio_ruta_L8_hosp set distancia_media_hospital_L8 mean promedio_ruta_L8_hosp]
-  if linea = "9" [set promedio_ruta_L9_hosp lput (sum distancia_ruta) promedio_ruta_L9_hosp set distancia_media_hospital_L9 mean promedio_ruta_L9_hosp]
-  if linea = "A" [set promedio_ruta_LA_hosp lput (sum distancia_ruta) promedio_ruta_LA_hosp set distancia_media_hospital_LA mean promedio_ruta_LA_hosp]
-  if linea = "B" [set promedio_ruta_LB_hosp lput (sum distancia_ruta) promedio_ruta_LB_hosp set distancia_media_hospital_LB mean promedio_ruta_LB_hosp]
-  if linea = "12" [set promedio_ruta_L12_hosp lput (sum distancia_ruta) promedio_ruta_L12_hosp set distancia_media_hospital_L12 mean promedio_ruta_L12_hosp]
-ifelse incendio? = true [set heridos? false ask turtle Origin [die]] [tren_reparado]
 end
 to llamar_bomberos
- if show_Bomberos? = false [user-message "Está desactivada la visualización de Estaciones de Bomberos" stop]
-  set IncidentesBomberos IncidentesBomberos + 1
 clear-output
-output-type "Se revisó el tren, hay riesgo de incendio, llamando bomberos." output-type " "
-  let prob_recursos_bomberos random 2
-  ask verticesESTABOM [
-  ifelse Fire_Station_Resources = "low" [set recursos_ESTABOM random 2][set recursos_ESTABOM 2 set prob_recursos_bomberos 2]
-    if prob_recursos_bomberos = recursos_ESTABOM [hatch-camiones_bomberos 1 [
-          set color blue
-          set shape "truck"
-          set size 1.5
-]]
-    if not any? camiones_bomberos [ ask verticesESTABOM [ ;;;;;;;esta sección es para garantizar que si no hay estaciones de bomberos por un roll, que se haga otro roll
-  ifelse Fire_Station_Resources = "low" [set recursos_ESTABOM random 2][set recursos_ESTABOM 2 set prob_recursos_bomberos 2]
-    if prob_recursos_bomberos = recursos_ESTABOM [hatch-camiones_bomberos 1 [
-          set color blue
-          set shape "truck"
-          set size 1.5
-]]
-  ]  ]]
-if show_Avenidas_Principales? = false   [user-message "Está desactivada la visualización de avenidas principales, no se puede calcular la ruta más corta" stop]
-ask turtle Destin [hatch-verticesAP 1 [ set shape "face happy" set size 1 set hidden? true move-to min-one-of camiones_bomberos [distance myself] set Origin who create-EnlaceAP-with min-one-of other verticesAP [distance myself]]]
+  output-type "Se revisó el tren, hay riesgo de incendio, llamando bomberos." output-type " "
 
-if usar_rutina_Dijkstra? = true [create-shortest-path]
-let distancia_ruta []
-let ruta []
-ask turtle Origin [foreach (nw:path-to turtle Destin) [x -> ask x [ set distancia_ruta lput(link-length)  distancia_ruta]] set ruta nw:path-to turtle Destin]
-print (word "La ruta más corta entre la estación de bomberos más cercana y el incidente de la linea " linea " es: " ruta " para una distancia total de: " sum distancia_ruta)
-  if linea = "1" [set promedio_ruta_L1_bom lput (sum distancia_ruta) promedio_ruta_L1_bom set distancia_media_bom_L1 mean promedio_ruta_L1_bom]
-  if linea = "2" [set promedio_ruta_L2_bom lput (sum distancia_ruta) promedio_ruta_L2_bom set distancia_media_bom_L2 mean promedio_ruta_L2_bom]
-  if linea = "3" [set promedio_ruta_L3_bom lput (sum distancia_ruta) promedio_ruta_L3_bom set distancia_media_bom_L3 mean promedio_ruta_L3_bom]
-  if linea = "4" [set promedio_ruta_L4_bom lput (sum distancia_ruta) promedio_ruta_L4_bom set distancia_media_bom_L4 mean promedio_ruta_L4_bom]
-  if linea = "5" [set promedio_ruta_L5_bom lput (sum distancia_ruta) promedio_ruta_L5_bom set distancia_media_bom_L5 mean promedio_ruta_L5_bom]
-  if linea = "6" [set promedio_ruta_L6_bom lput (sum distancia_ruta) promedio_ruta_L6_bom set distancia_media_bom_L6 mean promedio_ruta_L6_bom]
-  if linea = "7" [set promedio_ruta_L7_bom lput (sum distancia_ruta) promedio_ruta_L7_bom set distancia_media_bom_L7 mean promedio_ruta_L7_bom]
-  if linea = "8" [set promedio_ruta_L8_bom lput (sum distancia_ruta) promedio_ruta_L8_bom set distancia_media_bom_L8 mean promedio_ruta_L8_bom]
-  if linea = "9" [set promedio_ruta_L9_bom lput (sum distancia_ruta) promedio_ruta_L9_bom set distancia_media_bom_L9 mean promedio_ruta_L9_bom]
-  if linea = "A" [set promedio_ruta_LA_bom lput (sum distancia_ruta) promedio_ruta_LA_bom set distancia_media_bom_LA mean promedio_ruta_LA_bom]
-  if linea = "B" [set promedio_ruta_LB_bom lput (sum distancia_ruta) promedio_ruta_LB_bom set distancia_media_bom_LB mean promedio_ruta_LB_bom]
-  if linea = "12" [set promedio_ruta_L12_bom lput (sum distancia_ruta) promedio_ruta_L12_bom set distancia_media_bom_L12 mean promedio_ruta_L12_bom]
-tren_reparado
 end
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Funcion de movimiento general
+to movimiento_coches
+  ask cars[
+    set newnode one-of [link-neighbors] of mynode
+    repeat 10 [buscarnodo]
+    ;buscarnodo
+    face newnode
+    move-to newnode
+    set previousnode mynode
+    set mynode newnode
+
+   ]
+end
 to move
+ movimiento_coches
  movimiento_trenes ; incluye Incidente_Corto_Circuito ;Incluye revisión tren ; llamar ambulancia ;llamar_bomberos
+ ;notificar_direcciones
+ ;movimiento_tren
  tick
 end
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Algoritmo Dijkstra para ambulancias
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Ruta más corta con Algoritmo A*
+
+to path-select
+     ;;use the A-star algorithm to find the shortest path (shortest in terms of distance)
+     set mypath [] set step-in-path 0
+     ask verticesAP [set dist 99999 set done 0 set lastnode nobody set color brown]
+     ask mynode [
+       set dist 0 ] ;;distance to original node is 0
+    while [count verticesAP with [done = 0] > 0][
+      ask verticesAP with [dist < 99999 and done = 0][
+         ask myneighbors [
+           let dist0 distance myself + [dist] of myself    ;;renew the shorstest distance to this point if it is smaller
+           if dist > dist0 [set dist dist0 set done 0 ;;done=0 if dist renewed, so that it will renew the dist of its neighbors
+             set lastnode myself]  ;;record the last node to reach here in the shortest path
+           ;set color red  ;;all roads searched will get red
+           ]
+         set done 1  ;;set done 1 when it has renewed it neighbors
+      ]]
+
+     ;print "Found path"
+     ;;put nodes in shortest path into a list
+     let x destination
+     while [x != mynode] [
+       ;if show_path? [ask x [set color yellow] ] ;;highlight the shortest path
+       set mypath fput x mypath
+       set x [lastnode] of x ]
+end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Algoritmo Dijkstra
 to-report dijkstra
   let tempar []
-;;; aquí vv  cambio turtle(S)
-  ask vertexAP Origin [
+  ask turtle Origin [
     let r []
     let distan []
-    ;;;;;;;;;;;;;;atención aquí vvv (cambio de breed tortus) (P)
-    let l sort([who] of other verticesAP)
+    let l sort([who] of other turtles)
     let from_array l
     let index table:make
     let t 0
@@ -2825,12 +2817,10 @@ to-report dijkstra
     let j 0
     while [j < length(l)] [
       let de item j l
- ;;;;;;atención aquí   vvv cambio de breed enlace (S)
-      if is-link? enlaceAP who de
+      if is-link? link who de
         [let dd 0
           set next_index lput(de) next_index
-  ;;atención aquí vvv cambio de breed enlace (S)
-          ask enlaceAP who de [set dd link-length]
+          ask link who de [set dd link-length]
           let temproute item j r
           set temproute lput de temproute
           set r replace-item j r temproute
@@ -2845,11 +2835,9 @@ to-report dijkstra
         while [k < length(from_array)] [
           let temp_dest item k from_array
           if temp_dest != temp_from [
-  ;;;;;;;;;;;atención aquí vvv cambio de breed enlace (S)
-            if is-link? enlaceAP temp_dest temp_from [
+            if is-link? link temp_dest temp_from [
               let dd 0
- ;;;atención aquí vvv cambio de breed enlace (S)
-              ask enlaceAP temp_dest temp_from [set dd link-length]
+              ask link temp_dest temp_from [set dd link-length]
               let posic_dest table:get index temp_dest
               if item posic_dest distan > (dd + item posic_orig distan) [
                 set distan replace-item posic_dest distan (dd + item posic_orig distan)
@@ -2871,32 +2859,33 @@ to-report dijkstra
     set tempar lput total_distance tempar]
   report tempar
 end
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Ruta mas corta con Dijkstra para ambulancias y bomberos
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Ruta mas corta con Dijkstra
 to create-shortest-path
-  ask EnlacesAP [set hidden? false set thickness 0]
+  ask turtles [set color 85]
+  if Origin = Destin [user-message "Please select two different nodes" stop]
+  ask turtle Origin [set color Red]
+  ask turtle Destin [set color Red]
   let tempar dijkstra
   let final_route item 0 dijkstra
   let total_distance item 1 dijkstra
-  if heridos? = true [ print (word "La ruta más corta entre el hospital más cercano y el incidente de la linea " linea " es: " final_route " para una distancia total de: " total_distance)]
-  if heridos? = false [print (word "La ruta más corta entre la estación de bomberos más cercana y el incidente de la línea " linea " es: " final_route " para una distancia total de: " total_distance)]
+  print (word "The shortest path between Origin and Destination nodes is " final_route " for " total_distance)
   let i 0
   while [i < length(final_route) - 1] [
     if (item (i + 1) final_route) != Destin [ask turtle (item (i + 1) final_route) [set color 27]]
-;;;;;;; vvvv atención aquí (cambio enlace) (S)
-    ask EnlaceAP (item i final_route) (item (i + 1) final_route) [
+    ask link (item i final_route) (item (i + 1) final_route) [
       set color red
-      set thickness 0.2]
+      set thickness 0.3]
     set i i + 1]
 end
 @#$#@#$#@
 GRAPHICS-WINDOW
-254
-10
-955
-712
+385
+133
+1034
+783
 -1
 -1
-22.355
+15.65
 1
 8
 1
@@ -2906,10 +2895,10 @@ GRAPHICS-WINDOW
 0
 0
 1
--15
-15
--15
-15
+-20
+20
+-20
+20
 0
 0
 1
@@ -2944,153 +2933,153 @@ Projection
 2
 
 SWITCH
+5
+117
+127
+150
+show_Mapas?
+show_Mapas?
+0
 1
-126
-123
+-1000
+
+SWITCH
+6
 159
-show_Mapas?
-show_Mapas?
-0
+116
+192
+show_L1?
+show_L1?
+1
 1
 -1000
 
 SWITCH
-2
-168
-112
+6
 201
-show_L1?
-show_L1?
-0
+115
+234
+show_L2?
+show_L2?
+1
+1
+-1000
+
+SWITCH
+4
+250
+114
+283
+show_L3?
+show_L3?
+1
 1
 -1000
 
 SWITCH
 2
-210
-111
-243
-show_L2?
-show_L2?
-0
-1
--1000
-
-SWITCH
-0
-259
-110
-292
-show_L3?
-show_L3?
-0
-1
--1000
-
-SWITCH
-0
-302
-110
-335
+298
+112
+331
 show_L4?
 show_L4?
-0
+1
 1
 -1000
 
 SWITCH
 0
-350
+342
 111
-383
+375
 show_L5?
 show_L5?
-0
+1
 1
 -1000
 
 SWITCH
 0
-389
+386
 109
-422
+419
 show_L6?
 show_L6?
-0
+1
 1
 -1000
 
 SWITCH
 0
-435
+432
 109
-468
+465
 show_L7?
 show_L7?
-0
+1
 1
 -1000
 
 SWITCH
 0
-480
+477
 108
-513
+510
 show_L8?
 show_L8?
-0
+1
 1
 -1000
 
 SWITCH
 0
-524
+521
 107
-557
+554
 show_L9?
 show_L9?
-0
+1
 1
 -1000
 
 SWITCH
 0
-569
+566
 107
-602
+599
 show_L12?
 show_L12?
-0
+1
 1
 -1000
 
 SWITCH
 2
-616
+613
 106
-649
+646
 show_LA?
 show_LA?
-0
+1
 1
 -1000
 
 SWITCH
 0
-658
+655
 107
-691
+688
 show_LB?
 show_LB?
-0
+1
 1
 -1000
 
 SWITCH
-1153
-60
-1366
-93
+1299
+225
+1512
+258
 show_Avenidas_Principales?
 show_Avenidas_Principales?
 0
@@ -3098,43 +3087,172 @@ show_Avenidas_Principales?
 -1000
 
 TEXTBOX
-1414
-13
-1617
-63
+1725
+43
+1928
+93
 Incidentes relevantes
 20
 25.0
 1
 
+TEXTBOX
+1302
+87
+1509
+126
+Afecta vidas humanas
+15
+0.0
+1
+
+SWITCH
+1302
+114
+1595
+147
+show_Accidente_en_vias_principales?
+show_Accidente_en_vias_principales?
+1
+1
+-1000
+
+TEXTBOX
+1302
+157
+1593
+215
+Equipos, instalaciones y trenes\n
+15
+0.0
+1
+
+SWITCH
+1299
+189
+1601
+222
+show_Corto_circuito_llanta_ponchada?
+show_Corto_circuito_llanta_ponchada?
+1
+1
+-1000
+
+TEXTBOX
+1650
+41
+1923
+115
+Áreas externas informadas
+20
+25.0
+1
+
+OUTPUT
+1652
+90
+1892
+145
+13
+
+TEXTBOX
+1650
+176
+1960
+250
+Autoridades del STC Metro notificadas
+20
+25.0
+1
+
+OUTPUT
+1661
+238
+1901
+293
+13
+
+TEXTBOX
+1654
+330
+1923
+404
+Áreas del organismo involucradas
+20
+25.0
+1
+
+OUTPUT
+1664
+409
+1904
+464
+13
+
+TEXTBOX
+1653
+500
+1933
+550
+Usarios afectados
+20
+25.0
+1
+
 PLOT
-1380
-42
-1620
-278
-Incidentes por Linea
-Ticks
-Incidentes
+1663
+549
+1864
+699
+plot 1
+NIL
+NIL
 0.0
 10.0
 0.0
 10.0
 true
-true
+false
 "" ""
 PENS
-"L1" 1.0 0 -2064490 true "" "plot IncidentesL1"
-"L2" 1.0 0 -13345367 true "" "plot IncidentesL2"
-"L3" 1.0 0 -14333415 true "" "plot IncidentesL3"
-"L4" 1.0 0 -11221820 true "" "plot IncidentesL4"
-"L5" 1.0 0 -1184463 true "" "plot IncidentesL5"
-"L6" 1.0 0 -2674135 true "" "plot IncidentesL6"
-"L7" 1.0 0 -955883 true "" "plot IncidentesL7"
-"L8" 1.0 0 -15040220 true "" "plot IncidentesL8"
-"L9" 1.0 0 -10402772 true "" "plot IncidentesL9"
-"LA" 1.0 0 -4699768 true "" "plot IncidentesLA"
-"LB" 1.0 0 -15302303 true "" "plot IncidentesLB"
-"L12" 1.0 0 -7171555 true "" "plot IncidentesL12"
+"default" 1.0 0 -16777216 true "" "plot count turtles"
+
+TEXTBOX
+1664
+747
+1931
+821
+Tiempo de indisponibilidad
+20
+25.0
+1
+
+OUTPUT
+1667
+806
+1907
+861
+13
+
+TEXTBOX
+1658
+741
+2030
+815
+Redes de movilidad alternativas
+20
+25.0
+1
+
+CHOOSER
+1656
+777
+1863
+822
+Redes_movilidad_alternativas
+Redes_movilidad_alternativas
+"Metrobus" "etc" "etc" 3 4 5
+0
 
 BUTTON
 158
@@ -3202,6 +3320,16 @@ NIL
 NIL
 NIL
 NIL
+1
+
+TEXTBOX
+1734
+113
+2428
+184
+IV PREMIO  A LA INNOVACIÓN TECNOLÓGICA \n        \"Ing. Juan Manuel Ramírez Caraza\"
+30
+25.0
 1
 
 BUTTON
@@ -3357,11 +3485,21 @@ NIL
 NIL
 1
 
+TEXTBOX
+339
+805
+1289
+877
+Un sistema de operación y mantenimiento complejo adaptativo para reducir las averías en la operación.
+18
+63.0
+1
+
 SWITCH
-962
-207
-1126
-240
+1044
+393
+1208
+426
 show_Bomberos?
 show_Bomberos?
 0
@@ -3369,10 +3507,10 @@ show_Bomberos?
 -1000
 
 SWITCH
-964
-244
-1105
-277
+1046
+430
+1187
+463
 show_ISSSTE?
 show_ISSSTE?
 0
@@ -3380,10 +3518,10 @@ show_ISSSTE?
 -1000
 
 SWITCH
-962
-282
-1154
-315
+1044
+468
+1236
+501
 show_Centros_Salud?
 show_Centros_Salud?
 0
@@ -3391,10 +3529,10 @@ show_Centros_Salud?
 -1000
 
 SWITCH
-1153
-96
-1376
-129
+1299
+261
+1522
+294
 show_Avenidas_Secundarias?
 show_Avenidas_Secundarias?
 1
@@ -3402,25 +3540,40 @@ show_Avenidas_Secundarias?
 -1000
 
 SLIDER
-963
-58
-1135
-91
+1045
+222
+1217
+255
 number-of-trenes
 number-of-trenes
 0
 20
-2.0
+4.0
 2
 1
 NIL
 HORIZONTAL
 
+SLIDER
+1299
+297
+1471
+330
+number-of-cars
+number-of-cars
+0
+100
+20.0
+10
+1
+NIL
+HORIZONTAL
+
 BUTTON
-1059
-13
-1122
-46
+1045
+135
+1108
+168
 NIL
 move
 T
@@ -3434,601 +3587,114 @@ NIL
 1
 
 SLIDER
-962
-169
-1191
-202
+1045
+356
+1264
+389
 probabilidad_corto_circuito
 probabilidad_corto_circuito
 0
-100
-4.0
 1
+0.12
+0.01
 1
 %
 HORIZONTAL
 
 BUTTON
-994
-13
-1057
-46
-NIL
-move
-NIL
-1
-T
-OBSERVER
-NIL
-NIL
-NIL
-NIL
-1
-
-OUTPUT
-252
-719
-956
-779
-11
-
-SLIDER
-963
-95
-1143
-128
-probabilidad_heridos
-probabilidad_heridos
-0
-100
-73.0
-1
-1
-%
-HORIZONTAL
-
-SLIDER
-962
-133
-1147
-166
-probabilidad_incendio
-probabilidad_incendio
-0
-100
-0.0
-1
-1
-%
-HORIZONTAL
-
-CHOOSER
-1199
-134
-1369
-179
-Centros_Salud_Resources
-Centros_Salud_Resources
-"low" "high"
-0
-
-CHOOSER
-1199
+1046
 183
-1337
-228
-ISSSTE_Resources
-ISSSTE_Resources
-"low" "high"
-0
-
-CHOOSER
-1198
-232
-1354
-277
-Fire_Station_Resources
-Fire_Station_Resources
-"low" "high"
-0
-
-MONITOR
-1346
-433
-1484
-478
-Incidentes Totales
-IncidentesTotales
+1109
+216
+NIL
+move
+NIL
 1
+T
+OBSERVER
+NIL
+NIL
+NIL
+NIL
 1
-11
-
-MONITOR
-960
-323
-1047
-368
-Incidentes L1
-IncidentesL1
-17
-1
-11
-
-MONITOR
-1056
-323
-1143
-368
-Incidentes L2
-IncidentesL2
-17
-1
-11
-
-MONITOR
-1152
-322
-1239
-367
-Incidentes L3
-IncidentesL3
-17
-1
-11
-
-MONITOR
-1247
-322
-1334
-367
-Incidentes L4
-IncidentesL4
-17
-1
-11
-
-MONITOR
-960
-378
-1047
-423
-Incidentes L5
-IncidentesL5
-17
-1
-11
-
-MONITOR
-1056
-377
-1143
-422
-Incidentes L6
-IncidentesL6
-17
-1
-11
-
-MONITOR
-1152
-376
-1239
-421
-Incidentes L7
-IncidentesL7
-17
-1
-11
-
-MONITOR
-1247
-375
-1334
-420
-Incidentes L8
-IncidentesL8
-17
-1
-11
-
-MONITOR
-960
-435
-1047
-480
-Incidentes L9
-IncidentesL9
-17
-1
-11
-
-MONITOR
-1056
-435
-1144
-480
-Incidentes LA
-IncidentesLA
-17
-1
-11
-
-MONITOR
-1152
-434
-1239
-479
-Incidentes LB
-IncidentesLB
-17
-1
-11
-
-MONITOR
-1247
-433
-1341
-478
-Incidentes L12
-IncidentesL12
-17
-1
-11
-
-MONITOR
-1344
-322
-1509
-367
-Incidentes con Ambulancias
-IncidentesAmbulancias
-17
-1
-11
-
-MONITOR
-1344
-374
-1495
-419
-Incidentes con Bomberos
-IncidentesBomberos
-17
-1
-11
-
-MONITOR
-960
-487
-1122
-532
-Distancia Media Hospital L1
-distancia_media_hospital_L1
-17
-1
-11
-
-MONITOR
-1129
-488
-1291
-533
-Distancia Media Hospital L2
-distancia_media_hospital_L2
-17
-1
-11
-
-MONITOR
-1298
-488
-1460
-533
-Distancia Media Hospital L3
-distancia_media_hospital_L3
-17
-1
-11
-
-MONITOR
-1466
-489
-1631
-534
-Distancia Media Hospital  L4
-distancia_media_hospital_L4
-17
-1
-11
-
-MONITOR
-960
-537
-1122
-582
-Distancia Media Hospital L5
-distancia_media_hospital_L5
-17
-1
-11
-
-MONITOR
-1129
-539
-1291
-584
-Distancia Media Hospital L6
-distancia_media_hospital_L6
-17
-1
-11
-
-MONITOR
-1299
-540
-1461
-585
-Distancia Media Hospital L7
-distancia_media_hospital_L7
-17
-1
-11
-
-MONITOR
-1466
-541
-1628
-586
-Distancia Media Hospital L8
-distancia_media_hospital_L8
-17
-1
-11
-
-MONITOR
-960
-588
-1122
-633
-Distancia Media Hospital L9
-distancia_media_hospital_L9
-17
-1
-11
-
-MONITOR
-1128
-589
-1291
-634
-Distancia Media Hospital LA
-distancia_media_hospital_LA
-17
-1
-11
-
-MONITOR
-1299
-590
-1461
-635
-Distancia Media Hospital LB
-distancia_media_hospital_LB
-17
-1
-11
-
-MONITOR
-1466
-591
-1638
-636
-Distancia Media Hospital L12 
-distancia_media_hospital_L12
-17
-1
-11
-
-MONITOR
-960
-638
-1132
-683
-Distancia Media Bomberos L1
-distancia_media_bom_L1
-17
-1
-11
-
-MONITOR
-1139
-638
-1311
-683
-Distancia Media Bomberos L2
-distancia_media_bom_L2
-17
-1
-11
-
-MONITOR
-1316
-639
-1488
-684
-Distancia Media Bomberos L3
-distancia_media_bom_L3
-17
-1
-11
-
-MONITOR
-1494
-640
-1666
-685
-Distancia Media Bomberos L4
-distancia_media_bom_L4
-17
-1
-11
-
-MONITOR
-961
-687
-1133
-732
-Distancia Media Bomberos L5
-distancia_media_bom_L5
-17
-1
-11
-
-MONITOR
-1140
-687
-1312
-732
-Distancia Media Bomberos L6
-distancia_media_bom_L6
-17
-1
-11
-
-MONITOR
-1317
-687
-1489
-732
-Distancia Media Bomberos L7
-distancia_media_bom_L7
-17
-1
-11
-
-MONITOR
-1495
-688
-1667
-733
-Distancia Media Bomberos L8
-distancia_media_bom_L8
-17
-1
-11
-
-MONITOR
-960
-737
-1132
-782
-Distancia Media Bomberos L9
-distancia_media_bom_L9
-17
-1
-11
-
-MONITOR
-1141
-737
-1314
-782
-Distancia Media Bomberos LA
-distancia_media_bom_LA
-17
-1
-11
-
-MONITOR
-1319
-736
-1491
-781
-Distancia Media Bomberos LB
-distancia_media_bom_LB
-17
-1
-11
-
-MONITOR
-1495
-736
-1674
-781
-Distancia Media Bomberos L12
-distancia_media_bom_L12
-17
-1
-11
-
-PLOT
-1627
-43
-1875
-278
-Histograma de RCss a Hosp x L
-Distancia de RCs a Hosps
-#
-0.0
-10.0
-0.0
-10.0
-true
-true
-"" ""
-PENS
-"L1" 0.5 1 -2064490 true "" "histogram promedio_ruta_L1_hosp"
-"L2" 0.5 1 -13345367 true "" "histogram promedio_ruta_L2_hosp"
-"L3" 0.5 1 -14333415 true "" "histogram promedio_ruta_L3_hosp"
-"L4" 0.5 1 -11221820 true "" "histogram promedio_ruta_L4_hosp"
-"L5" 0.5 1 -1184463 true "" "histogram promedio_ruta_L5_hosp"
-"L6" 0.5 1 -2674135 true "" "histogram promedio_ruta_L6_hosp"
-"L7" 0.5 1 -955883 true "" "histogram promedio_ruta_L7_hosp"
-"L8" 0.5 1 -15040220 true "" "histogram promedio_ruta_L8_hosp"
-"L9" 0.5 1 -10402772 true "" "histogram promedio_ruta_L9_hosp"
-"LA" 0.5 1 -4699768 true "" "histogram promedio_ruta_LA_hosp"
-"LB" 0.5 1 -15302303 true "" "histogram promedio_ruta_LB_hosp"
-"L12" 0.5 1 -7171555 true "" "histogram promedio_ruta_L12_hosp"
-
-PLOT
-1635
-285
-1883
-518
-Histograma de RCs a EBoms x L
-Distancia de RCs a EBoms
-#
-0.0
-10.0
-0.0
-10.0
-true
-true
-"" ""
-PENS
-"L1" 0.5 1 -2064490 true "" "histogram promedio_ruta_L1_bom"
-"L2" 0.5 1 -13345367 true "" "histogram promedio_ruta_L2_bom"
-"L3" 0.5 1 -14333415 true "" "histogram promedio_ruta_L3_bom"
-"L4" 0.5 1 -11221820 true "" "histogram promedio_ruta_L4_bom"
-"L5" 0.5 1 -1184463 true "" "histogram promedio_ruta_L5_bom"
-"L6" 0.5 1 -2674135 true "" "histogram promedio_ruta_L6_bom"
-"L7" 0.5 1 -955883 true "" "histogram promedio_ruta_L7_bom"
-"L8" 0.5 1 -15040220 true "" "histogram promedio_ruta_L8_bom"
-"L9" 0.5 1 -10402772 true "" "histogram promedio_ruta_L9_bom"
-"LA" 0.5 1 -4699768 true "" "histogram promedio_ruta_LA_bom"
-"LB" 0.5 1 -15302303 true "" "histogram promedio_ruta_LB_bom"
-"L12" 0.5 1 -7171555 true "" "histogram promedio_ruta_L12_bom"
 
 SWITCH
-1196
-281
-1369
-314
-usar_rutina_Dijkstra?
-usar_rutina_Dijkstra?
+1043
+507
+1166
+540
+show_path?
+show_path?
 1
 1
 -1000
+
+OUTPUT
+1043
+544
+1412
+657
+12
+
+SLIDER
+1045
+281
+1225
+314
+probabilidad_heridos
+probabilidad_heridos
+0
+100
+45.0
+1
+1
+%
+HORIZONTAL
+
+SLIDER
+1044
+319
+1229
+352
+probabilidad_incendio
+probabilidad_incendio
+0
+100
+50.0
+1
+1
+%
+HORIZONTAL
+
+CHOOSER
+1317
+342
+1487
+387
+Centros_Salud_Resources
+Centros_Salud_Resources
+"low" "high"
+0
+
+CHOOSER
+1317
+394
+1455
+439
+ISSSTE_Resources
+ISSSTE_Resources
+"low" "high"
+0
+
+CHOOSER
+1316
+448
+1472
+493
+Fire_Station_Resources
+Fire_Station_Resources
+"low" "high"
+0
 
 @#$#@#$#@
 ## WHAT IS IT?
@@ -4050,10 +3716,6 @@ Most of the commands in the Code tab can be easily modified to display slightly 
 ## EXTENDING THE MODEL
 
 This model doesn't do anything particularly interesting, but you can easily copy some of the code from the Code tab into a new model that uses your own data, or does something interesting with the included data. See the other GIS code example, GIS Gradient Example, for an example of this technique.
-
-## NETLOGO FEATURES 
-For faster compuation, this model simplifies the original data by reducing the number of nodes. To do that, the walkway data is loaded to the 20 x 20 grid in Netlogo, which is small, and therefore, many nodes fall on the same patch. In each patch, we only want to keep one node, and duplicate nodes are removed, while their neighbors are connected to the one node left.
-Also, links are created in this model to represent raods. This is so far the best way I can find to deal with road related problems in Netlogo. However, because the way I create links is to link nodes one by one (see code for more details), so some roads are likely to be left behind. But again there is no better way I can find. Therefore, I also used a loop in setup to delete nodes that are not connected to the whole network.
 
 ## RELATED MODELS
 
