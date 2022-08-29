@@ -4033,33 +4033,42 @@ usar_rutina_Dijkstra?
 @#$#@#$#@
 ## WHAT IS IT?
 
-This model was built to test and demonstrate the functionality of the GIS NetLogo extension.
+This model was built to calculate with Dijkstra's algorithn and NetLogo's Networks extension the shortest route between an incident on a train in the STC Metro system of Mexico City and the nearest hospital and/or fire station, it also demonstrates the functionality of the GIS NetLogo extension. 
 
 ## HOW IT WORKS
 
-This model loads four different GIS datasets: a point file of world cities, a polyline file of world rivers, a polygon file of countries, and a raster file of surface elevation. It provides a collection of different ways to display and query the data, to demonstrate the capabilities of the GIS extension.
+This model loads different GIS datasets from the STC Metro system and from the main avenues of Mexico City, as wells as its public hospitals and fire stations. Then it draws the diferent GIS datasets with agents so that train-type agents may traverse among the lines. An incident occurs to any train and the shortest route between the incident and the nearest available hospital or fire station is calculated, this goes on and on.
 
 ## HOW TO USE IT
 
-Select a map projection from the projection menu, then click the setup button. You can then click on any of the other buttons to display data. See the code tab for specific information about how the different buttons work.
+There are two ways to use the model, by using the "setup" button you are analyzing the aggregate behavior of all the STC Metro lines from Mexico City, if you click on any "Zoom Linea X", you will only be analyzing the respective line from the STC Metro. 
 
 ## THINGS TO TRY
 
-Most of the commands in the Code tab can be easily modified to display slightly different information. For example, you could modify `display-cities` to label cities with their population instead of their name. Or you could modify `highlight-large-cities` to highlight small cities instead, by replacing `gis:find-greater-than` with `gis:find-less-than`.
+The resources of the hospitals and the fire stations may be set to either "high" or "low", high means there is always availability of resources, low means there is 50% chance there is no availability. The probabilities of the diferent incidents may be varied.
 
 ## EXTENDING THE MODEL
 
-This model doesn't do anything particularly interesting, but you can easily copy some of the code from the Code tab into a new model that uses your own data, or does something interesting with the included data. See the other GIS code example, GIS Gradient Example, for an example of this technique.
+Converting the distance from pixels to kilómeters or miles may prove to be useful for further analysis. Adding the ambulance agents and fire truck agents so that they interact with the cars agents may be interesting to analyze if considering speeds by moving several nodes instead of one at a time. 
 
 ## NETLOGO FEATURES 
-For faster compuation, this model simplifies the original data by reducing the number of nodes. To do that, the walkway data is loaded to the 20 x 20 grid in Netlogo, which is small, and therefore, many nodes fall on the same patch. In each patch, we only want to keep one node, and duplicate nodes are removed, while their neighbors are connected to the one node left.
-Also, links are created in this model to represent raods. This is so far the best way I can find to deal with road related problems in Netlogo. However, because the way I create links is to link nodes one by one (see code for more details), so some roads are likely to be left behind. But again there is no better way I can find. Therefore, I also used a loop in setup to delete nodes that are not connected to the whole network.
+For faster compuation, this model simplifies the original data by reducing the number of nodes. To do that, the walkway data is loaded to the 31 x 31 grid in Netlogo, which is small, and therefore, many nodes fall on the same patch. In each patch, we only want to keep one node, and duplicate nodes are removed, while their neighbors are connected to the one node left.
+Also, links are created in this model to represent raods. This is done to find the shortest route using Dijkstra's algorithm and the NetLogo extension Networks.
+
+## CAUTION
+If the switch for usar_rutina_Dijkstra? is enabled, some lines of the STC Metro may have some problems like 3, 4, A and others, this may be due to some inefficiency in the code. 
 
 ## RELATED MODELS
 
-GIS Gradient Example provides another example of how to use the GIS extension.
+GMU roads by (George Mason University) and "Dijkstra's Model" by (Alvaro, Gil 2012) were used to create this model.
 
-<!-- 2008 -->
+## Copyright and license 
+
+Copyright 2022 Adrián Gutiérrez Gómez adriangtzg.reverie@gmail.com
+
+## How to cite
+
+If you mention this model in an academic publication, I ask that you include this citation for the model - Gutiérrez, Adrián (2022), "Name Pending". Posgrado de Ingenería UNAM, CDMX. (adriangtzg.reverie@gmail.com)
 @#$#@#$#@
 default
 true
