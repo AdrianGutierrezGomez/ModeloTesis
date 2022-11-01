@@ -140,6 +140,7 @@ globals [
   distancia_media_bom_LA
   distancia_media_bom_LB
   distancia_media_bom_L12
+
 ;;;; variables para el promedio de las RCs hacia hospitales
 promedio_ruta_L1_hosp
 promedio_ruta_L2_hosp
@@ -827,6 +828,162 @@ to loadDataGis
   set LB-dataset gis:load-dataset "Data/LineaB.shp"
   set LB-estaciones-dataset gis:load-dataset "Data/Estaciones_LineaB.shp"
 
+  set Vias-secundarias-dataset gis:load-dataset "Data/Vias_.shp"
+  set Vias-principales-dataset gis:load-dataset "Data/vialidades_de_la_ciudad_de_mexico.shp"
+
+  set BOMBEROS-dataset gis:load-dataset "Data/BOMBEROS.shp"
+  set ISSSTE-dataset gis:load-dataset "Data/ISSSTE.shp"
+  set CENTROSSALUD-dataset gis:load-dataset "Data/CENTROS SALUD.shp"
+end
+to loadDataGisL1
+  gis:load-coordinate-system (word "Data/" projection ".prj")
+ ; Load all of our datasets
+  set Alcaldias-dataset gis:load-dataset "Data/ALCALDIAS.shp"
+   set L1-dataset gis:load-dataset "Data/Linea1.shp"
+  set L1-estaciones-dataset gis:load-dataset "Data/Estaciones_Linea1.shp"
+  set Vias-secundarias-dataset gis:load-dataset "Data/Vias_.shp"
+  set Vias-principales-dataset gis:load-dataset "Data/vialidades_de_la_ciudad_de_mexico.shp"
+
+  set BOMBEROS-dataset gis:load-dataset "Data/BOMBEROS.shp"
+  set ISSSTE-dataset gis:load-dataset "Data/ISSSTE.shp"
+  set CENTROSSALUD-dataset gis:load-dataset "Data/CENTROS SALUD.shp"
+end
+to loadDataGisL2
+    gis:load-coordinate-system (word "Data/" projection ".prj")
+ ; Load all of our datasets
+  set Alcaldias-dataset gis:load-dataset "Data/ALCALDIAS.shp"
+   set L2-dataset gis:load-dataset "Data/Linea2.shp"
+  set L2-estaciones-dataset gis:load-dataset "Data/Estaciones_Linea2.shp"
+  set Vias-secundarias-dataset gis:load-dataset "Data/Vias_.shp"
+  set Vias-principales-dataset gis:load-dataset "Data/vialidades_de_la_ciudad_de_mexico.shp"
+
+  set BOMBEROS-dataset gis:load-dataset "Data/BOMBEROS.shp"
+  set ISSSTE-dataset gis:load-dataset "Data/ISSSTE.shp"
+  set CENTROSSALUD-dataset gis:load-dataset "Data/CENTROS SALUD.shp"
+end
+to loadDataGisL3
+    gis:load-coordinate-system (word "Data/" projection ".prj")
+ ; Load all of our datasets
+  set Alcaldias-dataset gis:load-dataset "Data/ALCALDIAS.shp"
+  set L3-dataset gis:load-dataset "Data/Linea3.shp"
+  set L3-estaciones-dataset gis:load-dataset "Data/Estaciones_Linea3.shp"
+  set Vias-secundarias-dataset gis:load-dataset "Data/Vias_.shp"
+  set Vias-principales-dataset gis:load-dataset "Data/vialidades_de_la_ciudad_de_mexico.shp"
+
+  set BOMBEROS-dataset gis:load-dataset "Data/BOMBEROS.shp"
+  set ISSSTE-dataset gis:load-dataset "Data/ISSSTE.shp"
+  set CENTROSSALUD-dataset gis:load-dataset "Data/CENTROS SALUD.shp"
+end
+to loadDataGisL4
+  gis:load-coordinate-system (word "Data/" projection ".prj")
+ ; Load all of our datasets
+  set Alcaldias-dataset gis:load-dataset "Data/ALCALDIAS.shp"
+  set L4-dataset gis:load-dataset "Data/Linea4.shp"
+  set L4-estaciones-dataset gis:load-dataset "Data/Estaciones_Linea4.shp"
+  set Vias-secundarias-dataset gis:load-dataset "Data/Vias_.shp"
+  set Vias-principales-dataset gis:load-dataset "Data/vialidades_de_la_ciudad_de_mexico.shp"
+
+  set BOMBEROS-dataset gis:load-dataset "Data/BOMBEROS.shp"
+  set ISSSTE-dataset gis:load-dataset "Data/ISSSTE.shp"
+  set CENTROSSALUD-dataset gis:load-dataset "Data/CENTROS SALUD.shp"
+end
+to loadDataGisL5
+    gis:load-coordinate-system (word "Data/" projection ".prj")
+ ; Load all of our datasets
+  set Alcaldias-dataset gis:load-dataset "Data/ALCALDIAS.shp"
+ set L5-dataset gis:load-dataset "Data/Linea5.shp"
+  set L5-estaciones-dataset gis:load-dataset "Data/Estaciones_Linea5.shp"
+  set Vias-secundarias-dataset gis:load-dataset "Data/Vias_.shp"
+  set Vias-principales-dataset gis:load-dataset "Data/vialidades_de_la_ciudad_de_mexico.shp"
+
+  set BOMBEROS-dataset gis:load-dataset "Data/BOMBEROS.shp"
+  set ISSSTE-dataset gis:load-dataset "Data/ISSSTE.shp"
+  set CENTROSSALUD-dataset gis:load-dataset "Data/CENTROS SALUD.shp"
+end
+to loadDataGisL6
+      gis:load-coordinate-system (word "Data/" projection ".prj")
+ ; Load all of our datasets
+  set Alcaldias-dataset gis:load-dataset "Data/ALCALDIAS.shp"
+ set L6-dataset gis:load-dataset "Data/Linea6.shp"
+  set L6-estaciones-dataset gis:load-dataset "Data/Estaciones_Linea6.shp"
+  set Vias-secundarias-dataset gis:load-dataset "Data/Vias_.shp"
+  set Vias-principales-dataset gis:load-dataset "Data/vialidades_de_la_ciudad_de_mexico.shp"
+
+  set BOMBEROS-dataset gis:load-dataset "Data/BOMBEROS.shp"
+  set ISSSTE-dataset gis:load-dataset "Data/ISSSTE.shp"
+  set CENTROSSALUD-dataset gis:load-dataset "Data/CENTROS SALUD.shp"
+end
+to loadDataGisL7
+       gis:load-coordinate-system (word "Data/" projection ".prj")
+ ; Load all of our datasets
+  set Alcaldias-dataset gis:load-dataset "Data/ALCALDIAS.shp"
+set L7-dataset gis:load-dataset "Data/Linea7.shp"
+  set L7-estaciones-dataset gis:load-dataset "Data/Estaciones_Linea7.shp"
+  set Vias-secundarias-dataset gis:load-dataset "Data/Vias_.shp"
+  set Vias-principales-dataset gis:load-dataset "Data/vialidades_de_la_ciudad_de_mexico.shp"
+
+  set BOMBEROS-dataset gis:load-dataset "Data/BOMBEROS.shp"
+  set ISSSTE-dataset gis:load-dataset "Data/ISSSTE.shp"
+  set CENTROSSALUD-dataset gis:load-dataset "Data/CENTROS SALUD.shp"
+end
+to loadDataGisL8
+         gis:load-coordinate-system (word "Data/" projection ".prj")
+ ; Load all of our datasets
+  set Alcaldias-dataset gis:load-dataset "Data/ALCALDIAS.shp"
+set L8-dataset gis:load-dataset "Data/Linea8.shp"
+  set L8-estaciones-dataset gis:load-dataset "Data/Estaciones_Linea8.shp"
+  set Vias-secundarias-dataset gis:load-dataset "Data/Vias_.shp"
+  set Vias-principales-dataset gis:load-dataset "Data/vialidades_de_la_ciudad_de_mexico.shp"
+
+  set BOMBEROS-dataset gis:load-dataset "Data/BOMBEROS.shp"
+  set ISSSTE-dataset gis:load-dataset "Data/ISSSTE.shp"
+  set CENTROSSALUD-dataset gis:load-dataset "Data/CENTROS SALUD.shp"
+end
+to loadDataGisL9
+           gis:load-coordinate-system (word "Data/" projection ".prj")
+ ; Load all of our datasets
+  set Alcaldias-dataset gis:load-dataset "Data/ALCALDIAS.shp"
+set L9-dataset gis:load-dataset "Data/Linea9.shp"
+  set L9-estaciones-dataset gis:load-dataset "Data/Estaciones_Linea9.shp"
+  set Vias-secundarias-dataset gis:load-dataset "Data/Vias_.shp"
+  set Vias-principales-dataset gis:load-dataset "Data/vialidades_de_la_ciudad_de_mexico.shp"
+
+  set BOMBEROS-dataset gis:load-dataset "Data/BOMBEROS.shp"
+  set ISSSTE-dataset gis:load-dataset "Data/ISSSTE.shp"
+  set CENTROSSALUD-dataset gis:load-dataset "Data/CENTROS SALUD.shp"
+end
+to loadDataGisLA
+             gis:load-coordinate-system (word "Data/" projection ".prj")
+ ; Load all of our datasets
+  set Alcaldias-dataset gis:load-dataset "Data/ALCALDIAS.shp"
+set LA-dataset gis:load-dataset "Data/LineaA.shp"
+  set LA-estaciones-dataset gis:load-dataset "Data/Estaciones_LineaA.shp"
+  set Vias-secundarias-dataset gis:load-dataset "Data/Vias_.shp"
+  set Vias-principales-dataset gis:load-dataset "Data/vialidades_de_la_ciudad_de_mexico.shp"
+
+  set BOMBEROS-dataset gis:load-dataset "Data/BOMBEROS.shp"
+  set ISSSTE-dataset gis:load-dataset "Data/ISSSTE.shp"
+  set CENTROSSALUD-dataset gis:load-dataset "Data/CENTROS SALUD.shp"
+end
+to loadDataGisLB
+               gis:load-coordinate-system (word "Data/" projection ".prj")
+ ; Load all of our datasets
+  set Alcaldias-dataset gis:load-dataset "Data/ALCALDIAS.shp"
+set LB-dataset gis:load-dataset "Data/LineaB.shp"
+  set LB-estaciones-dataset gis:load-dataset "Data/Estaciones_LineaB.shp"
+  set Vias-secundarias-dataset gis:load-dataset "Data/Vias_.shp"
+  set Vias-principales-dataset gis:load-dataset "Data/vialidades_de_la_ciudad_de_mexico.shp"
+
+  set BOMBEROS-dataset gis:load-dataset "Data/BOMBEROS.shp"
+  set ISSSTE-dataset gis:load-dataset "Data/ISSSTE.shp"
+  set CENTROSSALUD-dataset gis:load-dataset "Data/CENTROS SALUD.shp"
+end
+to loadDataGisL12
+                 gis:load-coordinate-system (word "Data/" projection ".prj")
+ ; Load all of our datasets
+  set Alcaldias-dataset gis:load-dataset "Data/ALCALDIAS.shp"
+set L12-dataset gis:load-dataset "Data/Linea12.shp"
+  set L12-estaciones-dataset gis:load-dataset "Data/Estaciones_Linea12.shp"
   set Vias-secundarias-dataset gis:load-dataset "Data/Vias_.shp"
   set Vias-principales-dataset gis:load-dataset "Data/vialidades_de_la_ciudad_de_mexico.shp"
 
@@ -1989,7 +2146,7 @@ end
 to zoom_L1
 clear-all
   reset-ticks
-  loadDataGis
+  loadDataGisL1
 
   gis:set-world-envelope gis:envelope-of L1-estaciones-dataset
 
@@ -2028,7 +2185,7 @@ end
 to zoom_L2
   clear-all
   reset-ticks
-  loadDataGis
+  loadDataGisL2
   gis:set-world-envelope gis:envelope-of L2-estaciones-dataset
 
   if show_Mapas? [
@@ -2064,7 +2221,7 @@ end
 to zoom_L3
    clear-all
    reset-ticks
-   loadDataGis
+   loadDataGisL3
    gis:set-world-envelope gis:envelope-of L3-estaciones-dataset
 
   if show_Mapas? [
@@ -2100,7 +2257,7 @@ end
 to zoom_L4
    clear-all
    reset-ticks
-   loadDataGIS
+   loadDataGISL4
    gis:set-world-envelope gis:envelope-of L4-estaciones-dataset
 
   if show_Mapas? [
@@ -2136,7 +2293,7 @@ end
 to zoom_L5
    clear-all
    reset-ticks
-   loadDataGis
+   loadDataGisL5
    gis:set-world-envelope gis:envelope-of L5-estaciones-dataset
 
   if show_Mapas? [
@@ -2172,7 +2329,7 @@ end
 to zoom_L6
    clear-all
    reset-ticks
-   loadDataGis
+   loadDataGisL6
    gis:set-world-envelope gis:envelope-of L6-estaciones-dataset
 
   if show_Mapas? [
@@ -2209,7 +2366,7 @@ end
 to zoom_L7
    clear-all
    reset-ticks
-   loadDataGis
+   loadDataGisL7
    gis:set-world-envelope gis:envelope-of L7-estaciones-dataset
 
   if show_Mapas? [
@@ -2246,7 +2403,7 @@ end
 to zoom_L8
    clear-all
    reset-ticks
-   loadDataGis
+   loadDataGisL8
   gis:set-world-envelope gis:envelope-of L8-estaciones-dataset
 
   if show_Mapas? [
@@ -2282,7 +2439,7 @@ end
 to zoom_L9
    clear-all
    reset-ticks
-   loadDataGis
+   loadDataGisL9
    gis:set-world-envelope gis:envelope-of L9-estaciones-dataset
 
   if show_Mapas? [
@@ -2318,7 +2475,7 @@ end
 to zoom_L12
    clear-all
    reset-ticks
-   loadDataGis
+   loadDataGisL12
    gis:set-world-envelope gis:envelope-of L12-estaciones-dataset
 
   if show_Mapas? [
@@ -2353,7 +2510,7 @@ end
 to zoom_LA
    clear-all
    reset-ticks
-   loadDataGis
+   loadDataGisLA
    gis:set-world-envelope gis:envelope-of LA-estaciones-dataset
 
   if show_Mapas? [
@@ -2389,7 +2546,7 @@ end
 to zoom_LB
    clear-all
    reset-ticks
-   loadDataGis
+   loadDataGisLB
    gis:set-world-envelope gis:envelope-of LB-estaciones-dataset
 
   if show_Mapas? [
@@ -2711,6 +2868,7 @@ to tren_reparado
 end
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Funciones de movimiento de ambulancias y camiones de bomberos
 to llamar_ambulancia
+  let conjunto_hospitales (turtle-set verticesISSSTE verticesCENSAL)
   set IncidentesAmbulancias IncidentesAmbulancias + 1
  ifelse show_ISSSTE? or show_Centros_Salud? [
 clear-output
@@ -2731,9 +2889,19 @@ clear-output
           set shape "ambulance"
           set size 1.5
 ]]]
+    while [not any? ambulancias] [ ask verticesISSSTE [ ;;;;;;;esta sección es para garantizar que si no hay estaciones de bomberos por un roll, que se haga otro roll
+  ifelse ISSSTE_Resources = "low" [set recursos_ISSSTE random 2][ set recursos_ISSSTE 2 set prob_recursos_ISSSTE 2]
+
+    if prob_recursos_ISSSTE = recursos_ISSSTE [hatch-ambulancias 1 [
+          set color white
+          set shape "ambulance"
+          set size 1.5
+]]
+
+  ]  ]
 if show_Avenidas_Principales? = false   [user-message "Está desactivada la visualización de avenidas principales, no se puede calcular la ruta más corta" stop]
 ask turtle Destin [hatch-verticesAP 1 [ set shape "face happy" set size 1 set hidden? true move-to min-one-of ambulancias [distance myself] set Origin who create-EnlaceAP-with min-one-of other verticesAP [distance myself]]]
-
+ask turtle Origin [create-EnlaceAP-with min-one-of other verticesAP [distance myself]]
   ]
 [user-message "Está desactivada la visualización de Hospitales" stop]
 if usar_rutina_Dijkstra? = true [create-shortest-path]
@@ -2768,7 +2936,7 @@ output-type "Se revisó el tren, hay riesgo de incendio, llamando bomberos." out
           set shape "truck"
           set size 1.5
 ]]
-    if not any? camiones_bomberos [ ask verticesESTABOM [ ;;;;;;;esta sección es para garantizar que si no hay estaciones de bomberos por un roll, que se haga otro roll
+    while [not any? camiones_bomberos] [ ask verticesESTABOM [ ;;;;;;;esta sección es para garantizar que si no hay estaciones de bomberos por un roll, que se haga otro roll
   ifelse Fire_Station_Resources = "low" [set recursos_ESTABOM random 2][set recursos_ESTABOM 2 set prob_recursos_bomberos 2]
     if prob_recursos_bomberos = recursos_ESTABOM [hatch-camiones_bomberos 1 [
           set color blue
@@ -2778,7 +2946,7 @@ output-type "Se revisó el tren, hay riesgo de incendio, llamando bomberos." out
   ]  ]]
 if show_Avenidas_Principales? = false   [user-message "Está desactivada la visualización de avenidas principales, no se puede calcular la ruta más corta" stop]
 ask turtle Destin [hatch-verticesAP 1 [ set shape "face happy" set size 1 set hidden? true move-to min-one-of camiones_bomberos [distance myself] set Origin who create-EnlaceAP-with min-one-of other verticesAP [distance myself]]]
-
+  ask turtle Origin [create-EnlaceAP-with  min-one-of other verticesAP [distance myself]]
 if usar_rutina_Dijkstra? = true [create-shortest-path]
 let distancia_ruta []
 let ruta []
@@ -3410,7 +3578,7 @@ number-of-trenes
 number-of-trenes
 0
 20
-2.0
+8.0
 2
 1
 NIL
@@ -3442,7 +3610,7 @@ probabilidad_corto_circuito
 probabilidad_corto_circuito
 0
 100
-4.0
+1.0
 1
 1
 %
@@ -3481,7 +3649,7 @@ probabilidad_heridos
 probabilidad_heridos
 0
 100
-73.0
+50.0
 1
 1
 %
@@ -3496,7 +3664,7 @@ probabilidad_incendio
 probabilidad_incendio
 0
 100
-0.0
+50.0
 1
 1
 %
@@ -4428,6 +4596,4638 @@ display-cities
 display-countries
 @#$#@#$#@
 @#$#@#$#@
+<experiments>
+  <experiment name="Experimento_L1_IA" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L1</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL1</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L1</metric>
+    <metric>distancia_media_bom_L1</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L1_IB" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L1</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL1</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L1</metric>
+    <metric>distancia_media_bom_L1</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L1_IC" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L1</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL1</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L1</metric>
+    <metric>distancia_media_bom_L1</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L1_ID" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L1</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL1</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L1</metric>
+    <metric>distancia_media_bom_L1</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L1_IIA" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L1</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL1</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L1</metric>
+    <metric>distancia_media_bom_L1</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L1_IIB" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L1</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL1</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L1</metric>
+    <metric>distancia_media_bom_L1</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L1_IIC" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L1</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL1</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L1</metric>
+    <metric>distancia_media_bom_L1</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L1_IID" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L1</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL1</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L1</metric>
+    <metric>distancia_media_bom_L1</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L2_IA" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L2</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL2</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L2</metric>
+    <metric>distancia_media_bom_L2</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L2_IB" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L2</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL2</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L2</metric>
+    <metric>distancia_media_bom_L2</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L2_IC" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L2</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL2</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L2</metric>
+    <metric>distancia_media_bom_L2</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L2_ID" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L2</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL2</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L2</metric>
+    <metric>distancia_media_bom_L2</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L2_IIA" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L2</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL2</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L2</metric>
+    <metric>distancia_media_bom_L2</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L2_IIB" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L2</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL2</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L2</metric>
+    <metric>distancia_media_bom_L2</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L2_IIC" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L2</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL2</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L2</metric>
+    <metric>distancia_media_bom_L2</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L2_IID" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L2</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL2</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L2</metric>
+    <metric>distancia_media_bom_L2</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L3_IA" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L3</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL3</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L3</metric>
+    <metric>distancia_media_bom_L3</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L3_IB" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L3</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL3</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L3</metric>
+    <metric>distancia_media_bom_L3</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L3_IC" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L3</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL3</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L3</metric>
+    <metric>distancia_media_bom_L3</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L3_ID" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L3</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL3</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L3</metric>
+    <metric>distancia_media_bom_L3</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L3_IIA" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L3</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL3</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L3</metric>
+    <metric>distancia_media_bom_L3</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L3_IIB" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L3</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL3</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L3</metric>
+    <metric>distancia_media_bom_L3</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L3_IIC" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L3</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL3</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L3</metric>
+    <metric>distancia_media_bom_L3</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L3_IID" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L3</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL3</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L3</metric>
+    <metric>distancia_media_bom_L3</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L4_IA" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L4</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL4</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L4</metric>
+    <metric>distancia_media_bom_L4</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L4_IB" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L4</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL4</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L4</metric>
+    <metric>distancia_media_bom_L4</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L4_IC" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L4</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL4</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L4</metric>
+    <metric>distancia_media_bom_L4</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L4_ID" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L4</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL4</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L4</metric>
+    <metric>distancia_media_bom_L4</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L4_IIA" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L4</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL4</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L4</metric>
+    <metric>distancia_media_bom_L4</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L4_IIB" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L4</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL4</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L4</metric>
+    <metric>distancia_media_bom_L4</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L4_IIC" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L4</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL4</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L4</metric>
+    <metric>distancia_media_bom_L4</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L4_IID" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L4</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL4</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L4</metric>
+    <metric>distancia_media_bom_L4</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L5_IA" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L5</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL5</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L5</metric>
+    <metric>distancia_media_bom_L5</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L5_IB" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L5</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL5</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L5</metric>
+    <metric>distancia_media_bom_L5</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L5_IC" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L5</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL5</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L5</metric>
+    <metric>distancia_media_bom_L5</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L5_ID" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L5</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL5</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L5</metric>
+    <metric>distancia_media_bom_L5</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L5_IIA" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L5</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL5</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L5</metric>
+    <metric>distancia_media_bom_L5</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L5_IIB" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L5</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL5</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L5</metric>
+    <metric>distancia_media_bom_L5</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L5_IIC" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L5</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL5</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L5</metric>
+    <metric>distancia_media_bom_L5</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L5_IID" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L5</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL5</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L5</metric>
+    <metric>distancia_media_bom_L5</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L6_IA" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L6</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL6</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L6</metric>
+    <metric>distancia_media_bom_L6</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L6_IB" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L6</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL6</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L6</metric>
+    <metric>distancia_media_bom_L6</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L6_IC" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L6</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL6</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L6</metric>
+    <metric>distancia_media_bom_L6</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L6_ID" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L6</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL6</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L6</metric>
+    <metric>distancia_media_bom_L6</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L6_IIA" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L6</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL6</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L6</metric>
+    <metric>distancia_media_bom_L6</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L6_IIB" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L6</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL6</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L6</metric>
+    <metric>distancia_media_bom_L6</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L6_IIC" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L6</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL6</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L6</metric>
+    <metric>distancia_media_bom_L6</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L6_IID" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L6</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL6</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L6</metric>
+    <metric>distancia_media_bom_L6</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L7_IA" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L7</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL7</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L7</metric>
+    <metric>distancia_media_bom_L7</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L7_IB" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L7</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL7</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L7</metric>
+    <metric>distancia_media_bom_L7</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L7_IC" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L7</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL7</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L7</metric>
+    <metric>distancia_media_bom_L7</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L7_ID" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L7</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL7</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L7</metric>
+    <metric>distancia_media_bom_L7</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L7_IIA" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L7</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL7</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L7</metric>
+    <metric>distancia_media_bom_L7</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L7_IIB" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L7</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL7</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L7</metric>
+    <metric>distancia_media_bom_L7</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L7_IIC" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L7</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL7</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L7</metric>
+    <metric>distancia_media_bom_L7</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L7_IID" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L7</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL7</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L7</metric>
+    <metric>distancia_media_bom_L7</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L8_IA" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L8</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL8</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L8</metric>
+    <metric>distancia_media_bom_L8</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L8_IB" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L8</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL8</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L8</metric>
+    <metric>distancia_media_bom_L8</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L8_IC" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L8</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL8</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L8</metric>
+    <metric>distancia_media_bom_L8</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L8_ID" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L8</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL8</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L8</metric>
+    <metric>distancia_media_bom_L8</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L8_IIA" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L8</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL8</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L8</metric>
+    <metric>distancia_media_bom_L8</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L8_IIB" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L8</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL8</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L8</metric>
+    <metric>distancia_media_bom_L8</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L8_IIC" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L8</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL8</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L8</metric>
+    <metric>distancia_media_bom_L8</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L8_IID" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L8</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL8</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L8</metric>
+    <metric>distancia_media_bom_L8</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L9_IA" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L9</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL9</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L9</metric>
+    <metric>distancia_media_bom_L9</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L9_IB" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L9</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL9</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L9</metric>
+    <metric>distancia_media_bom_L9</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L9_IC" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L9</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL9</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L9</metric>
+    <metric>distancia_media_bom_L9</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L9_ID" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L9</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL9</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L9</metric>
+    <metric>distancia_media_bom_L9</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L9_IIA" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L9</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL9</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L9</metric>
+    <metric>distancia_media_bom_L9</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L9_IIB" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L9</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL9</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L9</metric>
+    <metric>distancia_media_bom_L9</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L9_IIC" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L9</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL9</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L9</metric>
+    <metric>distancia_media_bom_L9</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L9_IID" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L9</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL9</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L9</metric>
+    <metric>distancia_media_bom_L9</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L12_IA" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L12</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL12</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L12</metric>
+    <metric>distancia_media_bom_L12</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L12_IB" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L12</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL12</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L12</metric>
+    <metric>distancia_media_bom_L12</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L12_IC" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L12</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL12</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L12</metric>
+    <metric>distancia_media_bom_L12</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L12_ID" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L12</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL12</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L12</metric>
+    <metric>distancia_media_bom_L12</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L12_IIA" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L12</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL12</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L12</metric>
+    <metric>distancia_media_bom_L12</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L12_IIB" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L12</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL12</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L12</metric>
+    <metric>distancia_media_bom_L12</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L12_IIC" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L12</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL12</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L12</metric>
+    <metric>distancia_media_bom_L12</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_L12_IID" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_L12</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL12</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L12</metric>
+    <metric>distancia_media_bom_L12</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_LB_IA" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_LB</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesLB</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_LB</metric>
+    <metric>distancia_media_bom_LB</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_LB_IB" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_LB</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesLB</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_LB</metric>
+    <metric>distancia_media_bom_LB</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_LB_IC" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_LB</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesLB</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_LB</metric>
+    <metric>distancia_media_bom_LB</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_LB_ID" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_LB</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesLB</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_LB</metric>
+    <metric>distancia_media_bom_LB</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;high&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_LB_IIA" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_LB</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesLB</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_LB</metric>
+    <metric>distancia_media_bom_LB</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_LB_IIB" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_LB</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesLB</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_LB</metric>
+    <metric>distancia_media_bom_LB</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_LB_IIC" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_LB</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesLB</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_LB</metric>
+    <metric>distancia_media_bom_LB</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_LB_IID" repetitions="5" runMetricsEveryStep="true">
+    <setup>zoom_LB</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesLB</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_LB</metric>
+    <metric>distancia_media_bom_LB</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Experimento_proyecciones_L1_IID" repetitions="2" runMetricsEveryStep="true">
+    <setup>zoom_L1</setup>
+    <go>move</go>
+    <exitCondition>IncidentesTotales = 1000</exitCondition>
+    <metric>IncidentesL1</metric>
+    <metric>IncidentesAmbulancias</metric>
+    <metric>IncidentesBomberos</metric>
+    <metric>distancia_media_hospital_L1</metric>
+    <metric>distancia_media_bom_L1</metric>
+    <enumeratedValueSet variable="Projection">
+      <value value="&quot;WGS_84_Geographic&quot;"/>
+      <value value="&quot;US_Orthographic&quot;"/>
+      <value value="&quot;Lambert_Conformal_Conic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Mapas?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Avenidas_Principales?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-trenes">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="usar_rutina_Dijkstra?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_corto_circuito">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_heridos">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="probabilidad_incendio">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Bomberos?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_ISSSTE?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show_Centros_Salud?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ISSSTE_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Centros_Salud_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Fire_Station_Resources">
+      <value value="&quot;low&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+</experiments>
 @#$#@#$#@
 @#$#@#$#@
 default
